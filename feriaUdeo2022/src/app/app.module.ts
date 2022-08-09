@@ -15,6 +15,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { JuradoComponent } from './components/jurado/jurado.component';
+import { PlantillaComponent } from './components/plantilla/plantilla.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { JuradoComponent } from './components/jurado/jurado.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    JuradoComponent
+    JuradoComponent,
+    PlantillaComponent
   ],
   imports: [
     BrowserModule,
