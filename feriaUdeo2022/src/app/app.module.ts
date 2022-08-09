@@ -14,6 +14,7 @@ import { ProjectComponent } from './components/projects/project/project.componen
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
+import { JuradoComponent } from './components/jurado/jurado.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './components/login/login.component';
     ProjectComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    JuradoComponent
   ],
   imports: [
     BrowserModule,
