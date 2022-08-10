@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #131326;
+    color:#fff;
+}
+
+.neon {
+    color: #fff;
+    letter-spacing: 4px;
+    
+}
+.neon-celeste{
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 30px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+.neon-purpura{
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow:
+    0 0 4px #fff,
+    0 0 35px #fff,
+    0 0 40px #9312fc,
+    0 0 80px #9312fc,
+    0 0 90px #9312fc,
+    0 0 100px #9312fc,
+    0 0 150px #9312fc;
+}
+
+@font-face {
+    font-family: MANDO;
+    src: url(assets/Font/Mandalore-K77lD.otf);
+}
+
+.mando{
+    font-family: Mando;
+    font-size: 4rem;
+}
