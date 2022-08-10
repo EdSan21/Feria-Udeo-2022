@@ -7,6 +7,7 @@ import { JuradoComponent } from './components/jurado/jurado.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProjectComponent } from './components/projects/project/project.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { CarouselComponent } from './components/holders/carousel/carousel.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: 'jurado', component: JuradoComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: "**", pathMatch: 'full', redirectTo: 'login'}
+  {path: "**", pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
