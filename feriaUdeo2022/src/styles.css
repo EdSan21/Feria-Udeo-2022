@@ -1,38 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "assets/CSS/BotonArcoiris.css";
+@import "assets/CSS/Neon.css";
 body{
-    background-color: #131326;
+    background-color: rgb(33,37,41);
+    background-image:url(assets\Img\vecteezy_small-square-geometric-shape-with-modern-black-metallic_7169503.jpg) ;
     color:#fff;
 }
-
-.neon {
-    color: #fff;
-    letter-spacing: 4px;
-    
-}
-.neon-celeste{
-    color: #fff;
-    letter-spacing: 4px;
-    text-shadow:
-    0 0 10px #fff,
-    0 0 30px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
-}
-
-.neon-purpura{
-    color: #fff;
-    letter-spacing: 4px;
-    text-shadow:
-    0 0 4px #fff,
-    0 0 35px #fff,
-    0 0 40px #9312fc,
-    0 0 80px #9312fc,
-    0 0 90px #9312fc,
-    0 0 100px #9312fc,
-    0 0 150px #9312fc;
+.footer{
+    background-color: rgb(33,37,41) !important;
 }
 
 @font-face {
@@ -40,7 +16,19 @@ body{
     src: url(assets/Font/Mandalore-K77lD.otf);
 }
 
+
 .mando{
     font-family: Mando;
+    letter-spacing: 4px;
+}
+
+.Titulo{
     font-size: 4rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .Titulo{
+        font-size: 3rem;
+    }
+}
+
