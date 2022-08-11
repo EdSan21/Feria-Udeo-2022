@@ -8,7 +8,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="mynavbar">
+      <div class="collapse navbar-collapse"  id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="home">Inicio</a>
@@ -20,12 +20,33 @@
             <a class="nav-link" routerLinkActive="active" routerLink="jurado">Jurado</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="premiacion">Premiación</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="about">Creadores</a>
           </li>  
         </ul>
-        <form class="d-flex">
-          <button class="button-85" type="button">Login Jurado</button>
-        </form>
+        <!-- Dropdown login  -->
+        <div class="d-flex" >
+          <div ngbDropdown   placement="bottom-end" >
+            <button type="button" class="button-85" id="dropdownForm1" ngbDropdownToggle >Login Jurado</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-end" style="width:max-content; margin-top: 1rem;">
+              <form class="px-4 py-3">
+                <div class="mb-3">
+                  <label for="exampleDropdownFormEmail1">Usuario</label>
+                  <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario" autocomplete="username">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleDropdownFormPassword1">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña" autocomplete="current-password">
+                </div>
+                <br>
+                <button type="submit" class="button-85">Ingresar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- dropdown login end -->
       </div>
     </div>
   </nav>

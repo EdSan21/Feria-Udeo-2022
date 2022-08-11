@@ -32,3 +32,14 @@ body{
     }
 }
 
+.dropdown-menu{
+    background-color: rgb(22, 25, 28) !important;
+    color: #fff !important;
+    box-shadow: 
+    0 0 2px #fff,
+    5px 5px 20px #9312fc,
+    -5px -5px 20px #5012fc;
+    
+    margin-block: 55px;
+}
+
