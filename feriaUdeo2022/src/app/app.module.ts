@@ -19,6 +19,8 @@ import { CartasComponent } from './components/holders/cartas/cartas.component';
 import { TarjetasComponent } from './components/holders/tarjetas/tarjetas.component';
 import {CarouselComponent} from './components/holders/carousel/carousel.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PremiacionComponent } from './components/premiacion/premiacion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,13 +38,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CartasComponent,
     TarjetasComponent,
     CarouselComponent,
+    PremiacionComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
