@@ -31,17 +31,26 @@
           <div ngbDropdown   placement="bottom-end" >
             <button type="button" class="button-85" id="dropdownForm1" ngbDropdownToggle >Login Jurado</button>
             <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-end" style="width:max-content; margin-top: 1rem;">
-              <form class="px-4 py-3">
+              <form class="px-4 py-3" autocomplete="off" [formGroup]="Login">
+
                 <div class="mb-3">
-                  <label for="exampleDropdownFormEmail1">Usuario</label>
-                  <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario" autocomplete="username">
+                  <label for="User">Usuario</label>
+                  <input type="text" class="form-control" id="User" formControlName="User" placeholder="Usuario" [class.is-invalid]="UserNoValido">
+                  <small *ngIf="UserNoValido" class="text-danger">
+                    El campo requiere de al menos 6 caracteres
+                  </small>
                 </div>
+
                 <div class="mb-3">
-                  <label for="exampleDropdownFormPassword1">Contraseña</label>
-                  <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña" autocomplete="current-password">
+                  <label for="Password">Contraseña</label>
+                  <input type="password" class="form-control" id="Password" formControlName="Password" placeholder="Contraseña" [class.is-invalid]="PasswordNoValido">
+                  <small *ngIf="PasswordNoValido" class="text-danger">
+                    El campo requiere de al menos 6 caracteres  
+                  </small>
                 </div>
+
                 <br>
-                <button type="submit" class="button-85">Ingresar</button>
+                <button [disabled]="!Login.valid" type="submit" class="btn button-85">Ingresar</button>
               </form>
             </div>
           </div>

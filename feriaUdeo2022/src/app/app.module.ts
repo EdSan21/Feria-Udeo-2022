@@ -20,6 +20,7 @@ import { TarjetasComponent } from './components/holders/tarjetas/tarjetas.compon
 import {CarouselComponent} from './components/holders/carousel/carousel.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PremiacionComponent } from './components/premiacion/premiacion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { PremiacionComponent } from './components/premiacion/premiacion.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
