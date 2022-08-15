@@ -1,0 +1,66 @@
+.neon-lg-celeste {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 40px #0ff,
+    0 0 60px #0ff;
+    
+    margin-block: 55px;
+}
+.neon-lg-mixed {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 40px #0ff,
+    0 0 60px #0ff,
+    -20rem 0 40px #1270fc,
+    20rem 0 40px rgb(0, 255, 0);
+    
+    margin-block: 55px;
+}
+.neon-tx-lg-celeste{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 30px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+.neon-tx-lg-purpura{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 4px #fff,
+    0 0 35px #fff,
+    0 0 40px #9312fc,
+    0 0 80px #9312fc,
+    0 0 90px #9312fc,
+    0 0 100px #9312fc,
+    0 0 150px #9312fc;
+}
+
+
+.neon-tx-celeste{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 2px #fff,
+    0 0 15px #fff,
+    0 0 30px #0ff,
+    0 0 35px #0ff;
+}
+
+.neon-tx-purpura{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 2px #fff,
+    0 0 15px #fff,
+    0 0 30px #9312fc,
+    0 0 35px #9312fc;
+}
+
+
