@@ -1,21 +1,21 @@
 <div class="row">
     
     <div class="offset-md-2 col-md-8 autoHeight">
-        <a href="#" class="canvas">
+        <a href="#" class="canvas txt-Gold">
             <div class="canvas_border neon-lg-gold">
                 <svg>
-                    <defs><linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop><stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop></linearGradient><linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D34F48"></stop><stop offset="100%" stop-color="#772522"></stop></linearGradient></defs>
+                    <defs><linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(251, 205, 77);stop-opacity:1"></stop><stop offset="100%" style="stop-color:rgb(236, 178, 60);stop-opacity:1"></stop></linearGradient><linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D34F48"></stop><stop offset="100%" stop-color="#772522"></stop></linearGradient></defs>
                     <rect id="rect-grad" class="rect-gradient" fill="none" stroke="url(#grad-orange)" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="100%" height="100%"></rect>
                 </svg>
             </div>
             <div class="canvas_img-wrapper">
-                <img class="canvas_img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/249772/Twitter_Logo_Blue.png" alt="">
+                <img class="canvas_img" src={{Podio[0].Imagen}} alt="">
             </div>
             <div class="canvas_copy">
-                <span class="canvas_copy_subtitle">Heading</span>
-                <strong class="canvas_copy_title">Hello</strong>
-                <strong class="canvas_copy_title">World</strong>
-                <span class="canvas_copy_details">Details and stuff</span>
+                <span class="canvas_copy_subtitle ">{{Podio[0].Categoria}}</span>
+                <strong class="canvas_copy_title">#1er LUGAR</strong>
+                
+                <span class="canvas_copy_details">{{Podio[0].Titulo}}</span>
             </div>
         </a>
     </div>
@@ -25,40 +25,30 @@
 <div class="row">
     
     <div class="offset-md-1 col-md-5 autoHeight">
-        <a href="#" class="canvas">
+        <a href="#" class="canvas txt-Silver">
             <div class="canvas_border neon-md-silver">
-                <svg>
-                    <defs><linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop><stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop></linearGradient><linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D34F48"></stop><stop offset="100%" stop-color="#772522"></stop></linearGradient></defs>
-                    <rect id="rect-grad" class="rect-gradient" fill="none" stroke="url(#grad-orange)" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="100%" height="100%"></rect>
-                </svg>
             </div>
             <div class="canvas_img-wrapper">
-                <img class="canvas_img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/249772/Twitter_Logo_Blue.png" alt="">
+                <img class="canvas_img" src={{Podio[1].Imagen}} alt="">
             </div>
             <div class="canvas_copy">
-                <span class="canvas_copy_subtitle">Heading</span>
-                <strong class="canvas_copy_title">Hello</strong>
-                <strong class="canvas_copy_title">World</strong>
-                <span class="canvas_copy_details">Details and stuff</span>
+                <span class="canvas_copy_subtitle">{{Podio[1].Categoria}}</span>
+                <strong class="canvas_copy_title">#2do LUGAR</strong>
+                <span class="canvas_copy_details">{{Podio[1].Titulo}}</span>
             </div>
         </a>
     </div>
     <div class=" col-md-5 autoHeight">
-        <a href="#" class="canvas">
+        <a href="#" class="canvas txt-Bronze">
             <div class="canvas_border neon-md-bronze">
-                <svg>
-                    <defs><linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(253,137,68);stop-opacity:1"></stop><stop offset="100%" style="stop-color:rgb(153,75,23);stop-opacity:1"></stop></linearGradient><linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#D34F48"></stop><stop offset="100%" stop-color="#772522"></stop></linearGradient></defs>
-                    <rect id="rect-grad" class="rect-gradient" fill="none" stroke="url(#grad-orange)" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="100%" height="100%"></rect>
-                </svg>
             </div>
             <div class="canvas_img-wrapper">
-                <img class="canvas_img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/249772/Twitter_Logo_Blue.png" alt="">
+                <img class="canvas_img" src="https://m.media-amazon.com/images/I/71g1TNP7JXL._AC_SX425_.jpg" alt="">
             </div>
             <div class="canvas_copy">
-                <span class="canvas_copy_subtitle">Heading</span>
-                <strong class="canvas_copy_title">Hello</strong>
-                <strong class="canvas_copy_title">World</strong>
-                <span class="canvas_copy_details">Details and stuff</span>
+                <span class="canvas_copy_subtitle">{{Podio[2].Imagen}}</span>
+                <strong class="canvas_copy_title">#3er LUGAR</strong>
+                <span class="canvas_copy_details">{{Podio[2].Titulo}}</span>
             </div>
         </a>
     </div>
