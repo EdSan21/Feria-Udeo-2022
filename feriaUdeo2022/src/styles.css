@@ -2,6 +2,7 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "assets/CSS/BotonArcoiris.css";
 @import "assets/CSS/Neon.css";
+@import "assets/CSS/CardsProyects.css";
 html, body {
 	height: 100%;
 }

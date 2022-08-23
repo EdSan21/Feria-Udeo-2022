@@ -1,5 +1,5 @@
 /* Card */
-.container {
+.containerProyecto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     padding: 40px 0;
 }
 
-.container .box {
+.containerProyecto .box {
     position: relative;
     width: 320px;
     height: 400px;
@@ -18,7 +18,7 @@
     transition: 0.5s;
 }
 
-.container .box::before {
+.containerProyecto .box::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -32,7 +32,7 @@
     transition: 0.5s;
 }
 
-.container .box::after {
+.containerProyecto .box::after {
     content: '';
     position: absolute;
     top: 0;
@@ -46,40 +46,40 @@
     filter: blur(30px);
 }
 
-.container .box:hover:before,
-.container .box:hover:after {
+.containerProyecto .box:hover:before,
+.containerProyecto .box:hover:after {
     transform: skewX(0deg);
     left: 20px;
     width: calc(100% - 90px);
 
 }
 
-/* .container .box:nth-child(odd):before,
-.container .box:nth-child(odd):after {
+/* .containerProyecto .box:nth-child(odd):before,
+.containerProyecto .box:nth-child(odd):after {
     background: linear-gradient(315deg, #ffbc00, #ff0058)
 }
 
-.container .box:nth-child(even):before,
-.container .box:nth-child(even):after {
+.containerProyecto .box:nth-child(even):before,
+.containerProyecto .box:nth-child(even):after {
     background: linear-gradient(315deg, #03a9f4, #ff0058)
 } 
 
-.container .box:nth-child(odd):before,
-.container .box:nth-child(odd):after {
+.containerProyecto .box:nth-child(odd):before,
+.containerProyecto .box:nth-child(odd):after {
     background: linear-gradient(315deg, #4dff03, #00d0ff)
 } */
 
-.container .box:nth-child(even):before,
-.container .box:nth-child(even):after {
+.containerProyecto .box:nth-child(even):before,
+.containerProyecto .box:nth-child(even):after {
     background: linear-gradient(315deg, #0000FF, #8A2BE2)
 }
 
-.container .box:nth-child(odd):before,
-.container .box:nth-child(odd):after {
+.containerProyecto .box:nth-child(odd):before,
+.containerProyecto .box:nth-child(odd):after {
     background: linear-gradient(315deg, #191970, #FF00FF)
 }
 
-.container .box span {
+.containerProyecto .box span {
     display: block;
     position: absolute;
     top: 0;
@@ -90,7 +90,7 @@
     pointer-events: none;
 }
 
-.container .box span::before {
+.containerProyecto .box span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -106,7 +106,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
 }
 
-.container .box:hover span::before {
+.containerProyecto .box:hover span::before {
     top: -50px;
     left: 50px;
     width: 100px;
@@ -114,7 +114,7 @@
     opacity: 1;
 }
 
-.container .box span::after {
+.containerProyecto .box span::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -131,7 +131,7 @@
     animation-delay: -1s;
 }
 
-.container .box:hover span:after {
+.containerProyecto .box:hover span:after {
     bottom: -50px;
     right: 50px;
     width: 100px;
@@ -151,7 +151,7 @@
     }
 }
 
-.container .box .content {
+.containerProyecto .box .content {
     position: relative;
     left: 0;
     padding: 20px 40px;
@@ -164,24 +164,24 @@
     color: #fff;
 }
 
-.container .box:hover .content {
+.containerProyecto .box:hover .content {
     left: -25px;
     padding: 60px 40px;
 }
 
-.container .box .content h2 {
+.containerProyecto .box .content h2 {
     font-size: 2em;
     color: #fff;
     margin-bottom: 10px;
 }
 
-.container .box .content p {
+.containerProyecto .box .content p {
     font-size: 1.1em;
     margin-bottom: 10px;
     line-height: 1.4em;
 }
 
-.container .box .content a {
+.containerProyecto .box .content a {
     display: inline-block;
     font-size: 1.1em;
     color: #111;
@@ -193,7 +193,7 @@
     margin-top: 5px;
 }
 
-.container .box .content a:hover {
+.containerProyecto .box .content a:hover {
     background: #ffcf4d;
     border: 1px solid rgba(255, 0, 88, 0.4);
     box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
