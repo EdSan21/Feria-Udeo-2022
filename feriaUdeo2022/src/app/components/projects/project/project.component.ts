@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Project } from 'src/app/models/projectsmodel';
 
 @Component({
   selector: 'app-project',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor() { }
+  loading:boolean=true;
+  @Input() projectItem!: Project;
+  
+  constructor(public sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.loading=false
+    }, 5000);
   }
 
 }

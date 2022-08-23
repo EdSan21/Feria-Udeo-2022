@@ -1,1 +1,38 @@
-<p>jurado works!</p>
+<app-loading *ngIf="loading"></app-loading>
+<div class="card__collection-jurado clear-fix-jurado">
+    <div class="container-jurado">
+        <div *ngFor="let jurado of juradoList" class="box-jurado">
+            <div class="cards-jurado cards--three">
+                <img src={{jurado.image}}
+                    class="img-responsive-jurado" alt="">
+                <span class="cards--three__rect-1">
+                    <span class="shadow-1"></span>
+                    <p>{{jurado.name}}</p>
+                </span>
+                <span class="cards--three__rect-2">
+                    <span class="shadow-2"></span>
+                </span>
+                <span class="cards--three__circle"></span>
+                <ul class="cards--three__list">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-linkedin-in"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="cards cards--two">
+    <img src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d702cb99ca804bffcfa8820c46483264&auto=format&fit=crop&w=651&q=80"
+        class="img-responsive" alt="Cards Image">
+    <span class="cards--two__rect"></span>
+    <span class="cards--two__tri"></span>
+    <p>Lucy Grace</p>
+    <ul class="cards__list">
+        <li><i class="fab fa-facebook-f"></i></li>
+        <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+        <li><i class="fab fa-linkedin-in"></i></li>
+    </ul>
+</div> -->
