@@ -10,19 +10,19 @@ import { ProjectComponent } from './components/projects/project/project.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'project', component: ProjectComponent},
-  {path: 'projects', component: ProjectsComponent},
-  {path: 'jurado', component: JuradoComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path:'premiacion',component:PremiacionComponent},
-  {path: "**", pathMatch: 'full', redirectTo: 'home'}
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'project', component: ProjectComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'jurado', component: JuradoComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'premiacion', component: PremiacionComponent },
+  { path: "**", pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true})], //TODO # HASH
+  imports: [RouterModule.forRoot(routes, { useHash: true, scrollPositionRestoration: "enabled", anchorScrolling: "enabled" })], //TODO # HASH & RESET BOTH SCROLL BARS 
   exports: [RouterModule]  //EXPORTAMOS LAS RUTAS PARA PODERLAS USAR
 })
 export class AppRoutingModule { }

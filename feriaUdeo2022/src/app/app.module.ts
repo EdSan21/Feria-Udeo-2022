@@ -17,7 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { JuradoComponent } from './components/jurado/jurado.component';
 import { CartasComponent } from './components/holders/cartas/cartas.component';
 import { TarjetasComponent } from './components/holders/tarjetas/tarjetas.component';
-import {CarouselComponent} from './components/holders/carousel/carousel.component'
+import { CarouselComponent } from './components/holders/carousel/carousel.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PremiacionComponent } from './components/premiacion/premiacion.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -39,14 +39,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     TarjetasComponent,
     CarouselComponent,
     PremiacionComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
   ],
   providers: [],
