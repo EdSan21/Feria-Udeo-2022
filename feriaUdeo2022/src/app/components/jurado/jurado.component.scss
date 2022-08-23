@@ -1,5 +1,5 @@
 /* Jurado */
-.container {
+.container-jurado {
     position: relative;
     display: flex;
     justify-content: center;
@@ -7,20 +7,70 @@
     flex-wrap: wrap;
 }
 
-.container .box {
+.container-jurado .box-jurado {
     position: relative;
     width: 320px;
     height: 400px;
     margin: 40px 30px;
 }
 
-.clear-fix:after {
+.container-jurado .box-jurado:before{
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff00c8,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 400%;  
+    z-index: -1;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    width: calc(100% + 25px);
+    height: calc(100% + 25px);
+    animation: glowing-box-jurado 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-box-jurado {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+.container-jurado .box-jurado:after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    border: none !important;
+}
+
+.clear-fix-.box-jurado {
     display: block;
     clear: both;
     content: '';
 }
 
-.img-responsive {
+.img-responsive-jurado {
     max-width: 100%;
     height: auto;
 }
@@ -35,7 +85,7 @@ $color-box-5 : #f07306;
 $color-box-6 : #1B2159;
 $color-box-7 : #de8b3e;
 
-.card__collection {
+.card__collection-jurado {
     position: relative;
     display: block;
     background: rgba(10, 10, 10, .5);
@@ -43,7 +93,7 @@ $color-box-7 : #de8b3e;
     font-family: 'Do Hyeon', sans-serif;
     overflow: hidden;
 
-    .cards {
+    .cards-jurado {
         width: 300px;
         height: 400px;
         display: block;
@@ -56,7 +106,7 @@ $color-box-7 : #de8b3e;
         margin: 10px;
     }
 
-    .cards--one {
+    .cards--one-jurado {
         backface-visiblility: hidden;
 
         &:hover {
@@ -150,7 +200,7 @@ $color-box-7 : #de8b3e;
 
     }
 
-    .cards--two {
+    .cards--two-jurado {
         position: relative;
         backface-visibility: hidden;
 

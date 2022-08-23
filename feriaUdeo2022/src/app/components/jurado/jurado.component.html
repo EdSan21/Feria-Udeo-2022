@@ -1,107 +1,13 @@
-<div class="card__collection clear-fix">
-    <div class="container">
-        <div class="box">
-            <div class="cards cards--three">
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-                    class="img-responsive" alt="">
+<app-loading *ngIf="loading"></app-loading>
+<div class="card__collection-jurado clear-fix-jurado">
+    <div class="container-jurado">
+        <div *ngFor="let jurado of juradoList" class="box-jurado">
+            <div class="cards-jurado cards--three">
+                <img src={{jurado.image}}
+                    class="img-responsive-jurado" alt="">
                 <span class="cards--three__rect-1">
                     <span class="shadow-1"></span>
-                    <p>Albert Dera</p>
-                </span>
-                <span class="cards--three__rect-2">
-                    <span class="shadow-2"></span>
-                </span>
-                <span class="cards--three__circle"></span>
-                <ul class="cards--three__list">
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="cards cards--three">
-                <img src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d702cb99ca804bffcfa8820c46483264&auto=format&fit=crop&w=651&q=80"
-                    class="img-responsive" alt="">
-                <span class="cards--three__rect-1">
-                    <span class="shadow-1"></span>
-                    <p>Lucy Grace</p>
-                </span>
-                <span class="cards--three__rect-2">
-                    <span class="shadow-2"></span>
-                </span>
-                <span class="cards--three__circle"></span>
-                <ul class="cards--three__list">
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="cards cards--three">
-                <img src="https://images.unsplash.com/photo-1480408144303-d874c5e12201?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=575213599ae24b3dbdfd84be79425c50&auto=format&fit=crop&w=634&q=80"
-                    class="img-responsive" alt="">
-                <span class="cards--three__rect-1">
-                    <span class="shadow-1"></span>
-                    <p>Chris Levnon</p>
-                </span>
-                <span class="cards--three__rect-2">
-                    <span class="shadow-2"></span>
-                </span>
-                <span class="cards--three__circle"></span>
-                <ul class="cards--three__list">
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="cards cards--three">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-                    class="img-responsive" alt="">
-                <span class="cards--three__rect-1">
-                    <span class="shadow-1"></span>
-                    <p>Jake Nackos</p>
-                </span>
-                <span class="cards--three__rect-2">
-                    <span class="shadow-2"></span>
-                </span>
-                <span class="cards--three__circle"></span>
-                <ul class="cards--three__list">
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="cards cards--three">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-                    class="img-responsive" alt="">
-                <span class="cards--three__rect-1">
-                    <span class="shadow-1"></span>
-                    <p>Tyler Nix</p>
-                </span>
-                <span class="cards--three__rect-2">
-                    <span class="shadow-2"></span>
-                </span>
-                <span class="cards--three__circle"></span>
-                <ul class="cards--three__list">
-                    <li><i class="fab fa-facebook-f"></i></li>
-                    <li><i class="fab fa-twitter"></i></li>
-                    <li><i class="fab fa-linkedin-in"></i></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box">
-            <div class="cards cards--three">
-                <img src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-                    class="img-responsive" alt="">
-                <span class="cards--three__rect-1">
-                    <span class="shadow-1"></span>
-                    <p>Brooke Cagle</p>
+                    <p>{{jurado.name}}</p>
                 </span>
                 <span class="cards--three__rect-2">
                     <span class="shadow-2"></span>

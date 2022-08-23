@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PodioComponent } from './components/premiacion/sub/podio/podio.component';
 import { ReconocimientosComponent } from './components/premiacion/sub/reconocimientos/reconocimientos.component';
 import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premio-cat.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premi
     ReconocimientosComponent,
     PremioCatComponent,
     
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,6 @@ import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premi
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
