@@ -63,4 +63,34 @@
     0 0 35px #9312fc;
 }
 
+.neon-lg-gold {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 80px #F7EF8A,
+    0 0 50px #D2AC47,
+    0 0 40px #EDC967,
+    3rem 0 40px #EDC967,
+    8rem 0 90px rgba(237, 201, 103, 0.288),
+    -3rem 0 40px #AE8625; 
+}
+
+.neon-md-silver {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 80px #c4c4c4,
+    0 0 45px #9c9c9c,
+    2rem 0 30px #acacac,
+    -2rem 0 30px #545454; 
+}
+.neon-md-bronze {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 80px #9C7A3C,
+    0 0 45px #895E1A,
+    2rem 0 30px #C4624C,
+    -2rem 0 30px #723e18
+    ; 
+}
+
+
 
