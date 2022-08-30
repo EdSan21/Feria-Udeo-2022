@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Jurado } from '../models/juradomodels';
+import { Jurado, JuradoPage } from '../models/juradomodels';
 
-const apiUrl = 'http://localhost:3000/jurado';
+const apiUrl = 'https://localhost:44376/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class JuradoService {
     this.getJurado();
   }
 
-  getJurado(): Observable<Jurado[]> {
-    return this.http.get<Jurado[]>(apiUrl);
+  getJurado(): Observable<JuradoPage[]> {
+    return this.http.get<JuradoPage[]>(apiUrl+"Jurado");
   }
 }

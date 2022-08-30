@@ -17,12 +17,12 @@ export class PodioComponent implements OnInit {
     this.Podio[0] = {
       Titulo: "Circuito de carreras volador automatizado ecologico",
       Categoria:"Mecatronica",
-      Imagen:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Nao_Robot_%28Robocup_2016%29.jpg/800px-Nao_Robot_%28Robocup_2016%29.jpg"
+      Imagen:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lion_%28Panthera_leo%29_male_6y.jpg/500px-Lion_%28Panthera_leo%29_male_6y.jpg"
     } 
     this.Podio[1] = {
       Titulo: "Circuito digital",
       Categoria:"Programacion",
-      Imagen:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Nao_Robot_%28Robocup_2016%29.jpg/800px-Nao_Robot_%28Robocup_2016%29.jpg"
+      Imagen:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lion_%28Panthera_leo%29_male_6y.jpg/500px-Lion_%28Panthera_leo%29_male_6y.jpg"
     } 
     this.Podio[2] = {
       Titulo: "Maquina de Goldenberg",

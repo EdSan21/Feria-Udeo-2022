@@ -1,18 +1,25 @@
 <app-loading *ngIf="loading"></app-loading>
-<div class="card__collection-jurado clear-fix-jurado">
-    <div class="container-jurado">
-        <div *ngFor="let jurado of juradoList" class="box-jurado">
+<div class="card__collection-jurado clear-fix-jurado" *ngFor="let juradolista of juradoList">
+    
+
+    <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem;">
+        <h1 class="neon-tx-lg-purpura mando Titulo"> {{juradolista.tipo.toLowerCase()}} </h1>               
+    </div>
+    <div class="container-jurado" >
+
+        
+        <div *ngFor="let persona of juradolista.lista" class="box-jurado">
             <div class="cards-jurado cards--three">
-                <img src={{jurado.image}}
+                <img src={{persona.imagen}}
                     class="img-responsive-jurado" alt="">
                 <span class="cards--three__rect-1">
                     <span class="shadow-1"></span>
-                    <p>{{jurado.name}}</p>
+                    <p>{{persona.nombre1}} {{persona.nombre2}} {{persona.apellido1}} {{persona.apellido2}}</p>
                 </span>
                 <span class="cards--three__rect-2">
                     <span class="shadow-2"></span>
                 </span>
-                <span class="cards--three__circle"></span>
+                <span class="cards--three__circle"s></span>
                 <ul class="cards--three__list">
                     <li><i class="fab fa-facebook-f"></i></li>
                     <li><i class="fab fa-twitter"></i></li>
