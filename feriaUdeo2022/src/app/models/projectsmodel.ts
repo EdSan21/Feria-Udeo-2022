@@ -1,15 +1,42 @@
 export class Project {
-    id: number;
-    nameProject: string;
-    urlVideo: string;
-    description: string;
-    image: string;
+    idProyecto: number;
+    titulo: string;
+    video: string;
+    descripcion: string;
+    imgCarta: string;
+    categoria: string;
+    idcategoria: number;
+    
 
-    constructor(id = 0, nameProyect = '', urlVideo = '', description = '', image = '') {
-        this.id = id
-        this.nameProject = nameProyect
-        this.urlVideo = urlVideo
-        this.description = description
-        this.image = image
+    constructor(idProyecto = 0, titulo = '', video = '', descripcion = '', imgCarta = '', categoria = '', idcategoria = 0) {
+        this.idProyecto = idProyecto
+        this.titulo = titulo
+        this.video = video
+        this.descripcion = descripcion
+        this.imgCarta = imgCarta
+        this.categoria=categoria
+        this.idcategoria=idcategoria
+
+    }
+}
+export class categoriasProject {
+    idCategoria: number;
+    nombre: string;
+
+    constructor(idCategoria = 0, nombre = '') {
+        this.idCategoria = idCategoria
+        this.nombre = nombre
+    }
+}
+
+export class Projectpage {
+    categorias: categoriasProject[];
+    emision: Project[];
+    proyectos: Project[];
+
+    constructor(categorias: categoriasProject[], emision :Project[], proyectos:Project[]) {
+        this.categorias=categorias
+        this.emision=emision
+        this.proyectos=proyectos
     }
 }

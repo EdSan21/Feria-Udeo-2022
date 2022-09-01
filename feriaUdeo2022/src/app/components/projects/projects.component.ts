@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { timeout } from 'rxjs';
-import { Project } from 'src/app/models/projectsmodel';
+import { Project, Projectpage } from 'src/app/models/projectsmodel';
 import { InfoProjectsService } from 'src/app/services/infoprojects.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { InfoProjectsService } from 'src/app/services/infoprojects.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  projectList: Project[] = [];
+  projectList?: Projectpage;
   loading = true;
 
   constructor(
@@ -27,7 +27,8 @@ export class ProjectsComponent implements OnInit {
     this.servicio.getProjects().subscribe((projects) => {
       this.projectList = projects;
       console.log(projects);
-      this.loading=false
+      this.loading=false;
+      console.log(this.projectList)
     })
   }
 }

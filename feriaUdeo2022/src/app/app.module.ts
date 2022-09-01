@@ -21,6 +21,9 @@ import { CarouselComponent } from './components/holders/carousel/carousel.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PremiacionComponent } from './components/premiacion/premiacion.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PodioComponent } from './components/premiacion/sub/podio/podio.component';
+import { ReconocimientosComponent } from './components/premiacion/sub/reconocimientos/reconocimientos.component';
+import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premio-cat.component';
 import { LoadingComponent } from './shared/loading/loading.component';
 
 
@@ -40,6 +43,10 @@ import { LoadingComponent } from './shared/loading/loading.component';
     TarjetasComponent,
     CarouselComponent,
     PremiacionComponent,
+    PodioComponent,
+    ReconocimientosComponent,
+    PremioCatComponent,
+    
     LoadingComponent,
   ],
   imports: [

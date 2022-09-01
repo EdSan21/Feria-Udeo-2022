@@ -1,8 +1,7 @@
-<div class="container">
+<div class="containerProyecto animated fadeIn">
     <app-loading *ngIf="loading"></app-loading>
-    <div *ngFor="let projects of projectList" class="box" >
+    <div *ngFor="let projects of projectList?.proyectos" class="box">
         <app-project [projectItem]="projects">
         </app-project>
     </div>
-    <!-- </app-loading> -->
 </div>

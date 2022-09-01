@@ -1,15 +1,24 @@
 <!-- <app-loading *ngIf="loading"> -->
-<span></span>
-    <div class="content" >
-        <div [align]="">
-            <img [src]="projectItem.image" alt="" class="img-thumb">
-            <!-- <iframe width="100%" height="100%" [src]="sanitizer.bypassSecurityTrustResourceUrl(projectItem.urlVideo)"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe> -->
+<span class="animated fadeIn"></span>
+    <div class="content animated fadeIn">
+        <div class="animated fadeIn" [align]="">
+            <img [src]="projectItem.imgCarta" alt="" class="img-thumb animated fadeIn">
+            <!-- <iframe width="100%" 
+                height="100%" 
+                [src]="sanitizer.bypassSecurityTrustResourceUrl(projectItem.urlVideo)"
+                title="YouTube video player" 
+                frameborder="0"
+                allow="accelerometer; 
+                autoplay; 
+                clipboard-write; 
+                encrypted-media; 
+                gyroscope; 
+                picture-in-picture"
+                allowfullscreen>
+            </iframe> -->
         </div>
-        <h2>{{projectItem.nameProject}}</h2>
-        <p>{{projectItem.description}}</p>
+        <h2>{{projectItem.titulo}}</h2>
+        <p>{{projectItem.descripcion}}</p>
         <a href="#">Read More</a>
     </div>
 <!-- </app-loading> -->

@@ -1,8 +1,5 @@
 
-<!-- navigation -->
-
-  
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top animated fadeIn">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="home" style="margin-inline:  2%;">Logo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -27,12 +24,11 @@
           </li>  
         </ul>
         <!-- Dropdown login  -->
-        <div class="d-flex" >
+        <div class="d-flex">
           <div ngbDropdown   placement="bottom-end" >
             <button type="button" class="button-85" id="dropdownForm1" ngbDropdownToggle >Login Jurado</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-end" style="width:max-content; margin-top: 1rem;">
+            <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-end animated fadeIn" style="width:max-content; margin-top: 1rem;">
               <form class="px-4 py-3" autocomplete="off" [formGroup]="Login">
-
                 <div class="mb-3">
                   <label for="User">Usuario</label>
                   <input type="text" class="form-control" id="User" formControlName="User" placeholder="Usuario" [class.is-invalid]="UserNoValido">
@@ -40,7 +36,6 @@
                     El campo requiere de al menos 6 caracteres
                   </small>
                 </div>
-
                 <div class="mb-3">
                   <label for="Password">Contraseña</label>
                   <input type="password" class="form-control" id="Password" formControlName="Password" placeholder="Contraseña" [class.is-invalid]="PasswordNoValido">
@@ -48,7 +43,6 @@
                     El campo requiere de al menos 6 caracteres  
                   </small>
                 </div>
-
                 <br>
                 <button [disabled]="!Login.valid" type="submit" class="btn button-85">Ingresar</button>
               </form>
