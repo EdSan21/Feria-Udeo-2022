@@ -1,5 +1,5 @@
 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top animated fadeIn">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top animated fadeIn">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="home" style="margin-inline:  2%;">Logo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -25,27 +25,42 @@
         </ul>
         <!-- Dropdown login  -->
         <div class="d-flex">
+          
           <div ngbDropdown   placement="bottom-end" >
-            <button type="button" class="button-85" id="dropdownForm1" ngbDropdownToggle >Login Jurado</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="dropdown-menu dropdown-menu-end animated fadeIn" style="width:max-content; margin-top: 1rem;">
-              <form class="px-4 py-3" autocomplete="off" [formGroup]="Login">
-                <div class="mb-3">
-                  <label for="User">Usuario</label>
-                  <input type="text" class="form-control" id="User" formControlName="User" placeholder="Usuario" [class.is-invalid]="UserNoValido">
-                  <small *ngIf="UserNoValido" class="text-danger">
-                    El campo requiere de al menos 6 caracteres
-                  </small>
-                </div>
-                <div class="mb-3">
-                  <label for="Password">Contraseña</label>
-                  <input type="password" class="form-control" id="Password" formControlName="Password" placeholder="Contraseña" [class.is-invalid]="PasswordNoValido">
-                  <small *ngIf="PasswordNoValido" class="text-danger">
-                    El campo requiere de al menos 6 caracteres  
-                  </small>
-                </div>
-                <br>
-                <button [disabled]="!Login.valid" type="submit" class="btn button-85">Ingresar</button>
-              </form>
+            <button type="button" class="button-85" id="dropdownForm1" ngbDropdownToggle >{{ButtonSession}}</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownForm1" [ngClass]="{'dropdown-menu-start':PantallaSm, 'dropdown-menu-end':!PantallaSm}" class="dropdown-menu animated fadeIn" style="width:max-content; min-width: 200px; margin-top: 1rem;">
+              
+              <!-- Dropdown Sin session -->
+
+              <div *ngIf="!Session">
+                <form class="px-4 py-3" autocomplete="off" [formGroup]="LogForm">
+                  <div class="mb-3">
+                    <label for="User">Usuario</label>
+                    <input type="text" class="form-control" id="User" formControlName="User" placeholder="Usuario" [class.is-invalid]="UserNoValido">
+                    <small *ngIf="UserNoValido" class="text-danger">
+                      Campo obligatorio
+                    </small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Password">Contraseña</label>
+                    <input type="password" class="form-control" id="Password" formControlName="Password" placeholder="Contraseña" [class.is-invalid]="PasswordNoValido">
+                    <small *ngIf="PasswordNoValido" class="text-danger">
+                      Campo obligatorio  
+                    </small>
+                  </div>
+                  <br>
+                  <button [disabled]="!LogForm.valid" (click)="Login()" type="submit" class="btn button-85">Ingresar</button>
+                </form>
+              </div>
+
+              <!-- Dropdown con session -->
+
+              <div *ngIf="Session">
+                <img class="mx-auto d-block rounded" style="height: auto; width: 200px; padding: 15px !important;" src="{{ImgSession}}" alt="Usuario">
+                
+                <button  (click)="CerrarSession()" type="submit" class="btn button-85" style="display: block; margin: auto; margin-block: 15px;">Cerrar session</button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -54,5 +69,4 @@
     </div>
   </nav>
   
-<<<<<<< HEAD
   <div style="height:3.5rem;"></div>
