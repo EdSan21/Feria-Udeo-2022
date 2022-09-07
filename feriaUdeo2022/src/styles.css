@@ -72,3 +72,36 @@ body{
 .fadeIn {
     animation-name: fadeIn;
 }
+
+.offcanvas{
+    background-color: black !important;
+    color: #fff !important;
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 40px #0ff,
+    0 0 60px #0ff !important;
+    
+}
+
+.offcanvas-header{
+    margin-block: 0px !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(66, 255, 255, 0.685); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(173, 49, 223, 0.767); 
+  }

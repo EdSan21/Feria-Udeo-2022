@@ -3,6 +3,27 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { session } from 'src/app/models/Sessionmodel';
 import { LoginService } from 'src/app/services/login.service';
 
+
+interface Alert {
+  type: string;
+  message: string;
+}
+
+
+const Alert404: Alert[] = [{
+  type: 'danger',
+  message: 'Usuario o contraseña incorrectas',
+}];
+const Alert0: Alert[] = [{
+  type: 'danger',
+  message: 'No se ha podido conectar con el servidor, intente más tarde',
+}];
+const Alert500: Alert[] = [{
+  type: 'danger',
+  message: 'Ha ocurrido un problema con el servidor, intente más tarde',
+}];
+
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,6 +32,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class HeaderComponent implements OnInit {
 
+  alerts?: Alert[];
   Session:boolean=false;
   LoginBtn=false;
   LogForm!:FormGroup;
@@ -76,9 +98,21 @@ export class HeaderComponent implements OnInit {
       
     },
     err=>{
-      if (err.status==404) {
-        console.log("YAAAA");
-        
+      
+      switch (err.status) {
+        case 404:
+          this.alerts = Array.from(Alert404);
+          this.LogForm.reset();
+          break;
+        case 0:
+          this.alerts = Array.from(Alert0);
+          console.log(err)
+          break;
+        case 500:
+          this.alerts = Array.from(Alert500);
+          break;
+        default:
+          break;
       }
     },
     ()=>console.log('Cargado')
@@ -88,6 +122,10 @@ export class HeaderComponent implements OnInit {
       console.log("Catch");
     }
 
+  }
+
+  close(alert: Alert) {
+    this.alerts?.splice(this.alerts.indexOf(alert), 1);
   }
 
   CerrarSession(){

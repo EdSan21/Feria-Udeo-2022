@@ -28,7 +28,7 @@
           
           <div ngbDropdown   placement="bottom-end" >
             <button type="button" class="button-85" id="dropdownForm1" ngbDropdownToggle >{{ButtonSession}}</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownForm1" [ngClass]="{'dropdown-menu-start':PantallaSm, 'dropdown-menu-end':!PantallaSm}" class="dropdown-menu animated fadeIn" style="width:max-content; min-width: 200px; margin-top: 1rem;">
+            <div ngbDropdownMenu aria-labelledby="dropdownForm1" [ngClass]="{'dropdown-menu-start':PantallaSm, 'dropdown-menu-end':!PantallaSm}" class="dropdown-menu animated fadeIn" style="width:max-content; max-width: 255px; min-width: 200px; margin-top: 1rem;">
               
               <!-- Dropdown Sin session -->
 
@@ -50,6 +50,11 @@
                   </div>
                   <br>
                   <button [disabled]="!LogForm.valid" (click)="Login()" type="submit" class="btn button-85">Ingresar</button>
+
+                  <p *ngFor="let alert of alerts" >
+                    <ngb-alert style="margin-bottom: 0px; margin-top: 15px;" [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+                  </p>
+
                 </form>
               </div>
 
@@ -59,6 +64,7 @@
                 <img class="mx-auto d-block rounded" style="height: auto; width: 200px; padding: 15px !important;" src="{{ImgSession}}" alt="Usuario">
                 
                 <button  (click)="CerrarSession()" type="submit" class="btn button-85" style="display: block; margin: auto; margin-block: 15px;">Cerrar session</button>
+                
               </div>
 
             </div>

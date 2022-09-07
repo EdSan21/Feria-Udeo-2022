@@ -25,7 +25,7 @@ import { PodioComponent } from './components/premiacion/sub/podio/podio.componen
 import { ReconocimientosComponent } from './components/premiacion/sub/reconocimientos/reconocimientos.component';
 import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premio-cat.component';
 import { LoadingComponent } from './shared/loading/loading.component';
-
+import { ErrorApiComponent } from './shared/error-api/error-api.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +48,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     PremioCatComponent,
     
     LoadingComponent,
+          ErrorApiComponent,
   ],
   imports: [
     BrowserModule,
