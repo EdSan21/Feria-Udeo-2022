@@ -1,27 +1,32 @@
-<div class="container mx-auto px-5 lg:px-12 xl:px-14 py-4 animated fadeIn">
+<div class="container mx-auto px-5 lg:px-12 xl:px-14 py-4 animated fadeIn" *ngIf="!loadingDetails">
     <div class="grid md:grid-cols-7 md:gap-x-5">
         <div class="md:col-span-5 -">
-            <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" routerLink="../projects"></a>
-            <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: auto;" routerLink="../projects"> Volver al
+            <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" [routerLink]="['/../projects']"></a>
+            <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: auto;" [routerLink]="['/../projects']"> Volver al
                 contenido</a>
             <div class="flex flex-col md:flex-row justify-between gap-y-5 md:items-center my-3 px-2 py-2 rounded-md bg-stone-800"
                 style="background-color: rgb(39, 39, 42); opacity: .7; transform: none;">
                 <div class="my-1 flex items-center md:pl-4">
                     <div>
-                        <span class="text-xl text-white font-bold">Nombre Proyecto</span>
+                        <span class="text-xl text-white font-bold">{{proyecto.titulo}}</span>
                         <h2 class="text-lg md:text-white mt-1">Curso del proyecto</h2>
                     </div>
                 </div>
             </div>
             <div style="opacity: 1; transform: none;">
-                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/0Mq22pPFAZM" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                <iframe class="w-full aspect-video" 
+                    [src]="sanitizer.bypassSecurityTrustResourceUrl(proyecto.video)"
+                    frameborder="0" allow="accelerometer; 
+                    autoplay; 
+                    clipboard-write; 
+                    encrypted-media; 
+                    gyroscope; 
+                    picture-in-picture" 
                     allowfullscreen="">
                 </iframe>
             </div>
             <div class="bg-zinc-800 p-5 md:p-10 mt-2 rounded-md" style="opacity: 1; transform: none;">
-                <p class="my-4 text-gray-200">Dua Lipa, Coldplay, Martin Garrix & Kygo, The Chainsmokers Style - Felling
-                    Me #240
+                <p class="my-4 text-gray-200">{{proyecto.descripcion}}
                 </p>
                 <div class="flex flex-col items-start md:items-center md:flex-row md:justify-between">
                     <div class="py-4">
@@ -58,7 +63,8 @@
                     <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
                     <h2 class="my-2 text-sm font-bold"> User 1</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, voluptatum!</p>
+                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
+                    voluptatum!</p>
             </div>
             <div class="p-3 mb-2 bg-blackrounded w-full"
                 style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);">
@@ -66,7 +72,8 @@
                     <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
                     <h2 class="my-2 text-sm font-bold"> User 2</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, tempora!</p>
+                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, tempora!
+                </p>
             </div>
             <div class="p-3 mb-2 bg-blackrounded w-full"
                 style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
@@ -74,7 +81,8 @@
                     <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
                     <h2 class="my-2 text-sm font-bold"> User 3</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sapiente!</p>
+                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+                    sapiente!</p>
             </div>
             <div class="p-3 mb-2 bg-blackrounded w-full"
                 style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
@@ -82,7 +90,8 @@
                     <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
                     <h2 class="my-2 text-sm font-bold"> User 4</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, optio.</p>
+                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
+                    optio.</p>
             </div>
         </div>
     </div>
