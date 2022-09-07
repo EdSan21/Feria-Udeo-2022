@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { JuradoComponent } from './components/jurado/jurado.component';
 import { LoginComponent } from './components/login/login.component';
 import { PremiacionComponent } from './components/premiacion/premiacion.component';
+import { DetailsComponent } from './components/projects/details/details.component';
 import { ProjectComponent } from './components/projects/project/project.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'project', component: ProjectComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'details', component: DetailsComponent},
   { path: 'jurado', component: JuradoComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },

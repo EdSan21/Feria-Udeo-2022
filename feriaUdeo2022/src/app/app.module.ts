@@ -25,6 +25,7 @@ import { PodioComponent } from './components/premiacion/sub/podio/podio.componen
 import { ReconocimientosComponent } from './components/premiacion/sub/reconocimientos/reconocimientos.component';
 import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premio-cat.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { DetailsComponent } from './components/projects/details/details.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { LoadingComponent } from './shared/loading/loading.component';
     ContactComponent,
     ProjectsComponent,
     ProjectComponent,
+    DetailsComponent,
     HeaderComponent,
     FooterComponent,
     LoginComponent,
