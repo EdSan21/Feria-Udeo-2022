@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Project, Projectpage } from '../models/projectsmodel';
 import { Rutas } from './RutasApi';
 
-const apiUrl = 'https://localhost:7230/api/';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +19,7 @@ export class InfoProjectsService {
   }
 
   showDetails(id: string): Observable<Project>{
-    return this.http.get<Project>(apiUrl+"Proyects/"+id)
+    return this.http.get<Project>(Rutas.RutaDatos+"Proyects/"+id)
   }
 }
 
