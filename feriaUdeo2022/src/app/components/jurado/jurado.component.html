@@ -1,4 +1,8 @@
 <app-loading *ngIf="loading"></app-loading>
+<div *ngIf="ErrorTecnico">
+  <app-error-api></app-error-api>
+</div>
+<div *ngIf="!ErrorTecnico">
 <div class="card__collection-jurado clear-fix-jurado animated fadeIn" *ngFor="let juradolista of juradoList">
   <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem">
     <h1 class="neon-tx-lg-purpura mando Titulo">
@@ -28,6 +32,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- <div class="cards cards--two">

@@ -1,7 +1,66 @@
-<div class="containerProyecto animated fadeIn">
-    <app-loading *ngIf="loading"></app-loading>
-    <div *ngFor="let projects of projectList?.proyectos" class="box">
-        <app-project [projectItem]="projects">
-        </app-project>
+<div *ngIf="ErrorTecnico">
+    <app-error-api></app-error-api>
+  </div>
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="projectList?.emision">
+
+    <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem;">
+        <h1 class="neon-tx-rojo mando" style="margin:0 !important;"><i class="bi bi-broadcast"></i> Proyectos en emision <i class="bi bi-broadcast"></i></h1>               
+    </div>
+
+    <div class="offset-md-1 col-md-10 scroll-rojo Drag-Cards"  style="overflow:visible;">
+        
+
+        <drag-scroll #nav class="containerEmision animated fadeIn" >
+            <div drag-scroll-item *ngFor="let projects of projectList?.emision" class="cartaEmision">
+                <app-project [projectItem]="projects">
+                </app-project>
+            </div>
+            
+        </drag-scroll>
+
+        <h1 class="neon-tx-rojo-border mando btnleft" aria-label="Close" (click)="moveLeft()"><i class="bi bi-chevron-compact-left"></i></h1>
+        <h1 class="neon-tx-rojo-border mando btnrigth" aria-label="Close" (click)="moveRight()"><i class="bi bi-chevron-compact-right"></i></h1>
     </div>
 </div>
+
+<div *ngIf="projectList?.proyectos">
+    <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem;">
+        <h1 class="neon-tx-celeste mando" style="margin:0 !important;"> Todos los proyectos </h1>               
+    </div>
+    <div style="margin: auto; text-align: center; margin-block: 2rem;" >
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button  (click)="deseleccionar()" type="button" class="btn button-neon">Ver todos</button>
+            <button class="btn button-neon" (click)="open(content)">buscar categorias</button> 
+        </div>
+           
+    </div>
+    <div class="containerProyecto animated fadeIn">
+        <div *ngFor="let projects of FilterProyects" class="box">
+            <app-project [projectItem]="projects">
+            </app-project>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-offcanvas>
+    <div class="offcanvas-header">
+        <h4 class="neon-tx-celeste mando" style="margin:0 !important;"> <i class="bi bi-filter"></i> Seleccionar categoria </h4>
+        <h4 class="neon-tx-rojo mando" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x-lg"></i></h4>
+    </div>
+    <div class="offcanvas-body" >
+      <form>
+        <div class="mb-3">
+            <div *ngFor="let categorias of projectList?.categorias">
+                <button  (click)="seleccionar(categorias.idCategoria)" type="button" class="btn button-neon" style="width:100%; margin-block: 0.2rem;">{{categorias.nombre}}</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+
+  
+  <pre>{{ closeResult }}</pre>
+

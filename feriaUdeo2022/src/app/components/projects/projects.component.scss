@@ -1,0 +1,27 @@
+.containerEmision{
+    mask-image: linear-gradient(to left, transparent 0%, black 48px, black calc(100% - 70px), transparent 100%);
+}
+
+.Drag-Cards .btnleft {
+    position: absolute;
+    top: 70%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .Drag-Cards .btnrigth {
+    position: absolute;
+    top: 70%;
+    left: 91%;
+    transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
