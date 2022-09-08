@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Jurado, JuradoPage } from '../models/juradomodels';
 
-const apiUrl = 'https://localhost:44376/api/';
+const apiUrl = 'https://localhost:7230/api/';
 
 @Injectable({
   providedIn: 'root'

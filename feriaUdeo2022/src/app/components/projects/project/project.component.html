@@ -19,6 +19,6 @@
         </div>
         <h2>{{projectItem.titulo}}</h2>
         <p>{{projectItem.descripcion}}</p>
-        <a href="#">Read More</a>
+        <a class="nav-link" [routerLink]="['../details/'+projectItem.idProyecto]">Projects details!</a>
     </div>
 <!-- </app-loading> -->

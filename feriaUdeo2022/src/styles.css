@@ -67,8 +67,8 @@ body{
     from {opacity: 0;}
     to {opacity: 1;}
 }
-/* End Animation */
 
 .fadeIn {
     animation-name: fadeIn;
 }
+/* End Animation */
