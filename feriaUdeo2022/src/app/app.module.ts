@@ -26,6 +26,8 @@ import { ReconocimientosComponent } from './components/premiacion/sub/reconocimi
 import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premio-cat.component';
 import { LoadingComponent } from './shared/loading/loading.component';
 import { ErrorApiComponent } from './shared/error-api/error-api.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { ErrorApiComponent } from './shared/error-api/error-api.component';
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
+    DragScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

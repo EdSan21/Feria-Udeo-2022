@@ -71,6 +71,17 @@
     0 0 30px #fc1212,
     0 0 35px #fc1212;
 }
+.neon-tx-rojo-border{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 1px rgb(0, 0, 0),
+    0 0 2px rgb(0, 0, 0),
+    0 0 5px rgb(0, 0, 0),
+    0 0 10px rgb(255, 0, 0),
+    0 0 15px #fc1212,
+    0 0 20px #fc1212;
+}
 
 .neon-lg-gold {
     box-shadow: 

@@ -9,11 +9,19 @@
         <h1 class="neon-tx-rojo mando" style="margin:0 !important;"><i class="bi bi-broadcast"></i> Proyectos en emision <i class="bi bi-broadcast"></i></h1>               
     </div>
 
-    <div class="containerProyecto animated fadeIn HorizontalScroll">
-        <div *ngFor="let projects of projectList?.emision" class="box">
-            <app-project [projectItem]="projects">
-            </app-project>
-        </div>
+    <div class="offset-md-1 col-md-10 scroll-rojo Drag-Cards"  style="overflow:visible;">
+        
+
+        <drag-scroll #nav class="containerEmision animated fadeIn" >
+            <div drag-scroll-item *ngFor="let projects of projectList?.emision" class="cartaEmision">
+                <app-project [projectItem]="projects">
+                </app-project>
+            </div>
+            
+        </drag-scroll>
+
+        <h1 class="neon-tx-rojo-border mando btnleft" aria-label="Close" (click)="moveLeft()"><i class="bi bi-chevron-compact-left"></i></h1>
+        <h1 class="neon-tx-rojo-border mando btnrigth" aria-label="Close" (click)="moveRight()"><i class="bi bi-chevron-compact-right"></i></h1>
     </div>
 </div>
 

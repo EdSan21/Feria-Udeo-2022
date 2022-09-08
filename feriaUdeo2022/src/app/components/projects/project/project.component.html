@@ -1,6 +1,7 @@
 <!-- <app-loading *ngIf="loading"> -->
-<span class="animated fadeIn"></span>
-    <div class="content animated fadeIn">
+<div style="white-space:normal !important; user-select: none;">
+    <span class="animated fadeIn"></span>
+    <div class="content animated fadeIn min-width: 300px; min-height: 400px;">
         <div class="animated fadeIn" [align]="">
             <img [src]="projectItem.imgCarta" alt="" class="img-thumb animated fadeIn">
             <!-- <iframe width="100%" 
@@ -18,7 +19,8 @@
             </iframe> -->
         </div>
         <h2>{{projectItem.titulo}}</h2>
-        <p>{{projectItem.descripcion}}</p>
+        <p >{{projectItem.descripcion}}</p>
         <a href="#">Read More</a>
     </div>
+</div>
 <!-- </app-loading> -->
