@@ -1,24 +1,25 @@
-/* Card */
-.containerProyecto {
+.containerEmision {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    overflow-y:visible;
+    flex: 1;
     padding-bottom: 40px;
+    position:-ms-page;
+    
 }
 
-.containerProyecto .box {
+.containerEmision .cartaEmision {
     position: relative;
     width: 320px;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 30px;
+    margin: 65px 30px;
     transition: 0.5s;
 }
 
-.containerProyecto .box::before {
+.containerEmision .cartaEmision::before {
     content: ' ';
     position: absolute;
     top: 0;
@@ -32,7 +33,7 @@
     transition: 0.5s;
 }
 
-.containerProyecto .box::after {
+.containerEmision .cartaEmision::after {
     content: '';
     position: absolute;
     top: 0;
@@ -46,40 +47,40 @@
     filter: blur(30px);
 }
 
-.containerProyecto .box:hover:before,
-.containerProyecto .box:hover:after {
+.containerEmision .cartaEmision:hover:before,
+.containerEmision .cartaEmision:hover:after {
     transform: skewX(0deg);
     left: 20px;
     width: calc(100% - 90px);
 
 }
 
-/* .containerProyecto .box:nth-child(odd):before,
-.containerProyecto .box:nth-child(odd):after {
+/* .containerEmision .cartaEmision:nth-child(odd):before,
+.containerEmision .cartaEmision:nth-child(odd):after {
     background: linear-gradient(315deg, #ffbc00, #ff0058)
 }
 
-.containerProyecto .box:nth-child(even):before,
-.containerProyecto .box:nth-child(even):after {
+.containerEmision .cartaEmision:nth-child(even):before,
+.containerEmision .cartaEmision:nth-child(even):after {
     background: linear-gradient(315deg, #03a9f4, #ff0058)
 } 
 
-.containerProyecto .box:nth-child(odd):before,
-.containerProyecto .box:nth-child(odd):after {
+.containerEmision .cartaEmision:nth-child(odd):before,
+.containerEmision .cartaEmision:nth-child(odd):after {
     background: linear-gradient(315deg, #4dff03, #00d0ff)
 } */
 
-.containerProyecto .box:nth-child(even):before,
-.containerProyecto .box:nth-child(even):after {
-    background: linear-gradient(315deg, #0000FF, #8A2BE2)
+.containerEmision .cartaEmision:nth-child(even):before,
+.containerEmision .cartaEmision:nth-child(even):after {
+    background: linear-gradient(315deg, #ff0000, #3d3d3d)
 }
 
-.containerProyecto .box:nth-child(odd):before,
-.containerProyecto .box:nth-child(odd):after {
-    background: linear-gradient(315deg, #191970, #FF00FF)
+.containerEmision .cartaEmision:nth-child(odd):before,
+.containerEmision .cartaEmision:nth-child(odd):after {
+    background: linear-gradient(315deg, #414141, #ff0000)
 }
 
-.containerProyecto .box span {
+.containerEmision .cartaEmision span {
     display: block;
     position: absolute;
     top: 0;
@@ -90,7 +91,7 @@
     pointer-events: none;
 }
 
-.containerProyecto .box span::before {
+.containerEmision .cartaEmision span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -106,7 +107,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
 }
 
-.containerProyecto .box:hover span::before {
+.containerEmision .cartaEmision:hover span::before {
     top: -50px;
     left: 50px;
     width: 100px;
@@ -114,7 +115,7 @@
     opacity: 1;
 }
 
-.containerProyecto .box span::after {
+.containerEmision .cartaEmision span::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -131,7 +132,7 @@
     animation-delay: -1s;
 }
 
-.containerProyecto .box:hover span:after {
+.containerEmision .cartaEmision:hover span:after {
     bottom: -50px;
     right: 50px;
     width: 100px;
@@ -151,7 +152,7 @@
     }
 }
 
-.containerProyecto .box .content {
+.containerEmision .cartaEmision .content {
     position: relative;
     left: 0;
     padding: 20px 40px;
@@ -164,24 +165,23 @@
     color: #fff;
 }
 
-.containerProyecto .box:hover .content {
+.containerEmision .cartaEmision:hover .content {
     left: -25px;
-    padding: 60px 40px;
 }
 
-.containerProyecto .box .content h2 {
+.containerEmision .cartaEmision .content h2 {
     font-size: 2em;
     color: #fff;
     margin-bottom: 10px;
 }
 
-.containerProyecto .box .content p {
+.containerEmision .cartaEmision .content p {
     font-size: 1.1em;
     margin-bottom: 10px;
     line-height: 1.4em;
 }
 
-.containerProyecto .box .content a {
+.containerEmision .cartaEmision .content a {
     display: inline-block;
     font-size: 1.1em;
     color: #111;
@@ -193,7 +193,7 @@
     margin-top: 5px;
 }
 
-.containerProyecto .box .content a:hover {
+.containerEmision .cartaEmision .content a:hover {
     background: #ffcf4d;
     border: 1px solid rgba(255, 0, 88, 0.4);
     box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);

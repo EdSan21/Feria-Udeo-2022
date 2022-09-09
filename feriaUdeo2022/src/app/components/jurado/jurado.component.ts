@@ -11,16 +11,25 @@ export class JuradoComponent implements OnInit {
 
   juradoList: JuradoPage[] = []
   loading = true;
+  ErrorTecnico=false;
 
   constructor(private juradoService: JuradoService) { }
 
   ngOnInit(): void {
-    this.juradoService.getJurado().
-    subscribe((jurado)=>{
+    try {
+      this.juradoService.getJurado().
+      subscribe((jurado)=>{
       this.juradoList=jurado;
       console .log(jurado);
       this.loading=false;
-    });
+    },
+    err=>{this.ErrorTecnico=true;this.loading=false},
+    ()=>console.log('Cargado')
+    
+    );
+    } catch (error) {
+      this.loading=false;
+    }
     
         
   }

@@ -1,4 +1,4 @@
-<div class="container mx-auto px-5 lg:px-12 xl:px-14 py-4 animated fadeIn" *ngIf="!loadingDetails">
+<div class="containerDetails mx-2 px-5 lg:px-12 xl:px-14 py-4 sm:mx-1 animated fadeIn" *ngIf="!loadingDetails">
     <div class="grid md:grid-cols-7 md:gap-x-5">
         <div class="md:col-span-5 -">
             <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" [routerLink]="['/../projects']"></a>
@@ -13,17 +13,12 @@
                     </div>
                 </div>
             </div>
-            <div style="opacity: 1; transform: none;">
-                <iframe class="w-full aspect-video" 
-                    [src]="sanitizer.bypassSecurityTrustResourceUrl(proyecto.video)"
-                    frameborder="0" allow="accelerometer; 
-                    autoplay; 
-                    clipboard-write; 
-                    encrypted-media; 
-                    gyroscope; 
-                    picture-in-picture" 
-                    allowfullscreen="">
-                </iframe>
+            <div class="w-full md:w-full sm:w-full" style="opacity: 1; transform: none;">
+                <youtube-player class="w-full md:w-full sm:w-full"
+                    videoId={{proyecto.video}}
+                    [width]= "600"
+                    >
+                </youtube-player>
             </div>
             <div class="bg-zinc-800 p-5 md:p-10 mt-2 rounded-md" style="opacity: 1; transform: none;">
                 <p class="my-4 text-gray-200">{{proyecto.descripcion}}

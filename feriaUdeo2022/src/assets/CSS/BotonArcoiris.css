@@ -115,3 +115,24 @@
     min-width: 196px;
   }
 }
+
+
+.button-neon {
+  color: #da49b3;
+  border: 6px solid #da49b3;
+  border-radius:15px;
+  padding: 10px 10px;
+  font-size: 20px;
+  font-family: tahoma;
+  letter-spacing:5px;
+  cursor: pointer;
+  font-weight: bold;
+  filter: drop-shadow(0 0 1px #da49b3) drop-shadow(0 0 15px #da49b3) contrast(1.5) brightness(1);
+  transition: .5s;
+}
+
+.button-neon:hover {
+  color: black;
+  background-color: #da49b3;
+  filter: drop-shadow(0 0 20px #da49b3) contrast(2) brightness(2);
+}

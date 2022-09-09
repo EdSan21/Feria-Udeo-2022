@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -26,6 +27,8 @@ import { ReconocimientosComponent } from './components/premiacion/sub/reconocimi
 import { PremioCatComponent } from './components/premiacion/sub/premio-cat/premio-cat.component';
 import { LoadingComponent } from './shared/loading/loading.component';
 import { DetailsComponent } from './components/projects/details/details.component';
+import { ErrorApiComponent } from './shared/error-api/error-api.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 
 @NgModule({
@@ -50,6 +53,7 @@ import { DetailsComponent } from './components/projects/details/details.componen
     PremioCatComponent,
     
     LoadingComponent,
+          ErrorApiComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +61,8 @@ import { DetailsComponent } from './components/projects/details/details.componen
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
+    DragScrollModule,
+    YouTubePlayerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
