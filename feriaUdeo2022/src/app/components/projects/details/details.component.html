@@ -1,5 +1,6 @@
-<div class="containerDetails mx-2 px-5 lg:px-12 xl:px-14 py-4 sm:mx-1 animated fadeIn" *ngIf="!loadingDetails">
-    <div class="grid md:grid-cols-7 md:gap-x-5">
+<div class="containerDetails mx-2 px-5 lg:px-12 xl:px-14 xxl:px-15 py-4 sm:mx-1 animated fadeIn"
+    *ngIf="!loadingDetails">
+    <div class="grid md:grid-cols-7 md:gap-x-5 xxl:grid-cols-7 xxl:gap-x-5  ">
         <div class="md:col-span-5 -">
             <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" [routerLink]="['/../projects']"></a>
             <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: auto;" [routerLink]="['/../projects']"> Volver al
@@ -14,10 +15,7 @@
                 </div>
             </div>
             <div class="w-full md:w-full sm:w-full" style="opacity: 1; transform: none;">
-                <youtube-player class="w-full md:w-full sm:w-full"
-                    videoId={{proyecto.video}}
-                    [width]= "600"
-                    >
+                <youtube-player class="w-full md:w-full sm:w-full" videoId={{proyecto.video}} [width]="600">
                 </youtube-player>
             </div>
             <div class="bg-zinc-800 p-5 md:p-10 mt-2 rounded-md" style="opacity: 1; transform: none;">
@@ -52,41 +50,67 @@
         <!-- Integrantes -->
         <div class="md:col-span-2 mt-2 md:mt-0 ">
             <h1 class="text-center text-3xl text-white" routerLink="../projects">Integrantes</h1><br>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);">
+            <div class="p-3 mb-2 bg-zinc-800 rounded w-full"
+                style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                 <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 1</h2>
+                    <div class="">
+                        <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            alt="">
+                    </div>
+                    <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 1<br /> Nickname 1</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                    voluptatum!</p>
             </div>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);">
+            <div class="p-3 mb-2 bg-zinc-800 rounded w-full"
+                style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                 <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 2</h2>
+                    <div class="">
+                        <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            alt="">
+                    </div>
+                    <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 2<br /> Nickname 2</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, tempora!
-                </p>
             </div>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+            <div class="p-3 mb-2 bg-zinc-800 rounded w-full"
+                style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                 <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 3</h2>
+                    <div class="">
+                        <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            alt="">
+                    </div>
+                    <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 3<br /> Nickname 3</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-                    sapiente!</p>
             </div>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+            <!-- Supervisores -->
+            <h1 class="text-center text-3xl text-white" routerLink="../projects">Supervisores</h1><br>
+            <div class="p-3 mb-2 bg-zinc-800 rounded w-full"
+                style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                 <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 4</h2>
+                    <div class="">
+                        <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            alt="">
+                    </div>
+                    <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 1<br /> Nickname 1</h2>
                 </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-                    optio.</p>
+            </div>
+            <div class="p-3 mb-2 bg-zinc-800 rounded w-full"
+                style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                <div class="flex">
+                    <div class="">
+                        <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            alt="">
+                    </div>
+                    <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 2<br /> Nickname 2</h2>
+                </div>
+            </div>
+            <div class="p-3 mb-2 bg-zinc-800 rounded w-full"
+                style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                <div class="flex">
+                    <div class="">
+                        <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            alt="">
+                    </div>
+                    <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 3<br /> Nickname 3</h2>
+                </div>
             </div>
         </div>
     </div>

@@ -1,3 +1,3 @@
-export class Rutas{
-    public static RutaDatos='https://localhost:7230/api/';
+export class Rutas {
+    public static RutaDatos = 'https://localhost:44376/api/';
 }
