@@ -1,98 +1,141 @@
-<div class="container mx-auto px-5 lg:px-12 xl:px-14 py-4 animated fadeIn" *ngIf="!loadingDetails">
-    <div class="grid md:grid-cols-7 md:gap-x-5">
-        <div class="md:col-span-5 -">
-            <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" [routerLink]="['/../projects']"></a>
-            <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: auto;" [routerLink]="['/../projects']"> Volver al
-                contenido</a>
-            <div class="flex flex-col md:flex-row justify-between gap-y-5 md:items-center my-3 px-2 py-2 rounded-md bg-stone-800"
-                style="background-color: rgb(39, 39, 42); opacity: .7; transform: none;">
-                <div class="my-1 flex items-center md:pl-4">
-                    <div>
-                        <span class="text-xl text-white font-bold">{{proyecto.titulo}}</span>
-                        <h2 class="text-lg md:text-white mt-1">Curso del proyecto</h2>
-                    </div>
-                </div>
-            </div>
-            <div style="opacity: 1; transform: none;">
-                <iframe class="w-full aspect-video" 
-                    [src]="sanitizer.bypassSecurityTrustResourceUrl(proyecto.video)"
-                    frameborder="0" allow="accelerometer; 
-                    autoplay; 
-                    clipboard-write; 
-                    encrypted-media; 
-                    gyroscope; 
-                    picture-in-picture" 
-                    allowfullscreen="">
-                </iframe>
-            </div>
-            <div class="bg-zinc-800 p-5 md:p-10 mt-2 rounded-md" style="opacity: 1; transform: none;">
-                <p class="my-4 text-gray-200">{{proyecto.descripcion}}
-                </p>
-                <div class="flex flex-col items-start md:items-center md:flex-row md:justify-between">
-                    <div class="py-4">
-                        <p class="text-gray-300 font-bold mb-2">¿Quieres Compatir mi Contenido?</p>
-                        <div class="flex gap-x-2">
-                            <button>
-                                <i class="fab fa-facebook-square" style="font-size:24px"></i>
-                            </button>
-                            <button>
-                                <i class="fab fa-twitter-square" style="font-size:24px"></i>
-                            </button>
-                            <button>
-                                <i class="fab fa-whatsapp" style="font-size:24px"></i>
-                            </button>
+<main class="text-white" style="min-height: 80vh;">
+    <div class="containerDetails mx-2 px-5 lg:px-12 xl:px-14 xxl:px-15 py-4 sm:mx-1 animated fadeIn"
+        *ngIf="!loadingDetails">
+        <div class="grid lg:grid-cols-7 lg:gap-x-5 xxl:grid-cols-7 xxl:gap-x-5">
+            <div class="md:col-span-5">
+                <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" [routerLink]="['/../projects']"></a>
+                <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: auto;" [routerLink]="['/../projects']">
+                    Volver al
+                    contenido</a>
+                <div class="flex flex-col md:flex-row justify-between gap-y-5 md:items-center my-3 px-2 py-2 rounded-md bg-stone-800"
+                    style="background-color: rgb(39, 39, 42); opacity: .7; transform: none;">
+                    <div class="my-1 flex items-center md:pl-4">
+                        <div>
+                            <span class="text-xl text-white font-bold">{{proyecto.titulo}}</span>
+                            <h2 class="text-lg md:text-white mt-1">Curso del proyecto</h2>
                         </div>
                     </div>
-                    <div>
-                        <p class="text-gray-300">
-                            <span>Actualizado:
-                                <strong> 1/09/2022</strong>
-                            </span>
-                        </p>
-                        <p class="text-secondary">Publicado: 1/8/2022</p>
+                    <div class="stars">
+                        <form action="">
+                            <input class="star star-5" id="star-5" type="radio" name="star" />
+                            <label class="star star-5" for="star-5"></label>
+                            <input class="star star-4" id="star-4" type="radio" name="star" />
+                            <label class="star star-4" for="star-4"></label>
+                            <input class="star star-3" id="star-3" type="radio" name="star" />
+                            <label class="star star-3" for="star-3"></label>
+                            <input class="star star-2" id="star-2" type="radio" name="star" />
+                            <label class="star star-2" for="star-2"></label>
+                            <input class="star star-1" id="star-1" type="radio" name="star" />
+                            <label class="star star-1" for="star-1"></label>
+                        </form>
+                    </div>
+                </div>
+                <div class="w-full md:w-full sm:w-full" style="opacity: 1; transform: none;">
+                    <youtube-player class="w-full md:w-full sm:w-full" videoId={{proyecto.video}} [width]="600">
+                    </youtube-player>
+                </div>
+                <div class="bg-zinc-800 p-5 md:p-10 mt-2 rounded-md" style="opacity: 1; transform: none;">
+                    <p class="my-4 text-gray-200">{{proyecto.descripcion}}
+                    </p>
+                    <div class="flex flex-col items-start md:items-center md:flex-row md:justify-between">
+                        <div class="py-4">
+                            <p class="text-gray-300 font-bold mb-2">¿Quieres Compatir mi Contenido?</p>
+                            <div class="flex gap-x-2">
+                                <button>
+                                    <i class="fab fa-facebook-square" style="font-size:24px"></i>
+                                </button>
+                                <button>
+                                    <i class="fab fa-twitter-square" style="font-size:24px"></i>
+                                </button>
+                                <button>
+                                    <i class="fab fa-whatsapp" style="font-size:24px"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-300">
+                                <span>Actualizado:
+                                    <strong> 1/09/2022</strong>
+                                </span>
+                            </p>
+                            <p class="text-secondary">Publicado: 1/8/2022</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Integrantes -->
-        <div class="md:col-span-2 mt-2 md:mt-0 ">
-            <h1 class="text-center text-3xl text-white" routerLink="../projects">Integrantes</h1><br>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);">
-                <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 1</h2>
-                </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-                    voluptatum!</p>
-            </div>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);">
-                <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 2</h2>
-                </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, tempora!
-                </p>
-            </div>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
-                <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 3</h2>
-                </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-                    sapiente!</p>
-            </div>
-            <div class="p-3 mb-2 bg-blackrounded w-full"
-                style="opacity: 1; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
-                <div class="flex">
-                    <i class="fa fa-user m-2" style="font-size:24px;width: 1.7rem;"></i>
-                    <h2 class="my-2 text-sm font-bold"> User 4</h2>
-                </div>
-                <p class="text-xs text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-                    optio.</p>
+            <!-- DIV DERECHO -->
+            <div class="md:col-span-2 mt-2 md:mt-0 lg:gap-x-5">
+                <!-- Integrantes -->
+                <ul class="">
+                    <h1 class="text-center text-3xl text-white" routerLink="../projects">Integrantes</h1><br>
+                    <li class="p-3 mb-2 bg-zinc-800 rounded"
+                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                        <div class="flex">
+                            <div class="mt-2">
+                            <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                                alt="">
+                            </div>
+                            <h2 class="p-3 my-2 text-sm font-bold items-center">{{proyecto.video}} {{proyecto.video}}<br /> Nickname 1</h2>
+                        </div>
+                    </li>
+                    <li class="p-3 mb-2 bg-zinc-800 rounded"
+                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                        <div class="flex">
+                            <div class="">
+                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                                    alt="">
+                            </div>
+                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 2<br /> Nickname 2</h2>
+                        </div>
+                    </li>
+                    <li class="p-3 mb-2 bg-zinc-800 rounded"
+                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                        <div class="flex">
+                            <div class="">
+                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                                    alt="">
+                            </div>
+                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 3<br /> Nickname 3</h2>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Supervisores -->
+                <ul class="">
+                    <h1 class="text-center text-3xl text-white md:justify-between" routerLink="../projects">Supervisores
+                    </h1>
+                    <br>
+                    <li class="p-3 mb-2 bg-zinc-800 rounded"
+                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                        <div class="flex">
+                            <div class="">
+                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                                    alt="">
+                            </div>
+                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 1<br /> Nickname 1</h2>
+                        </div>
+                    </li>
+                    <li class="p-3 mb-2 bg-zinc-800 rounded"
+                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                        <div class="flex">
+                            <div class="">
+                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                                    alt="">
+                            </div>
+                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 2<br /> Nickname 2</h2>
+                        </div>
+                    </li>
+                    <li class="p-3 mb-2 bg-zinc-800 rounded"
+                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                        <div class="flex">
+                            <div class="">
+                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                                    alt="">
+                            </div>
+                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 3<br /> Nickname 3</h2>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</main>
