@@ -1,1 +1,8 @@
 @import "../../../../assets/CSS/detailProyect.css";
+.puntuacion {
+    font-size: 3rem;
+    color: #1b232e;
+  }
+  .filled {
+    color: #ffffff;
+  }

@@ -1,1 +1,27 @@
-<app-podio></app-podio>
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="ErrorTecnico!=0 && ErrorTecnico!=401">
+    <app-error-api></app-error-api>
+</div>
+<div *ngIf="!loading&& ErrorTecnico==401">
+  <div class="offset-md-2 col-md-8 text-center animated fadeIn " style="padding-top: 5rem;">
+    <h1 class="mando Titulo neon-tx-gold"> Los ganadores se definirán  al final del evento</h1>
+    <h1 class="Titulo neon-tx-gold"> <i class="bi bi-award"></i>- <i class="bi bi-trophy"></i> -<i class="bi bi-award"></i></h1>
+  </div>
+</div>
+
+<div *ngIf="!loading&& ErrorTecnico==0">
+    <app-podio [PrimerLugar]="Premios.primerLugar" [SegundoLugar]="Premios.segundoLugar" [TercerLugar]="Premios.tercerLugar"></app-podio>
+    <br>
+    <br>
+    <app-reconocimientos [projectList]="Premios.reconocimientos"></app-reconocimientos>
+    <br>
+    <div class="text-center">
+      <h1 class="neon-tx-gold mando" style="margin:0 !important;">Ganadores por categoria</h1>
+    </div>
+    <br>
+    <app-premio-cat [projectList]="Premios.ganadoresCategorias"></app-premio-cat>
+</div>
+
+
+
+

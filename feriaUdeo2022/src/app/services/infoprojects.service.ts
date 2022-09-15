@@ -11,7 +11,6 @@ import { Rutas } from './RutasApi';
 export class InfoProjectsService {
 
   constructor(public http: HttpClient) { 
-    this.getProjects();
   }
 
   getProjects(): Observable<Projectpage> {
@@ -21,5 +20,19 @@ export class InfoProjectsService {
   showDetails(id: string): Observable<Project>{
     return this.http.get<Project>(Rutas.RutaDatos+"Proyects/"+id)
   }
+  showDetailsLogged(id: string, IdSession:string, sessionUser:string): Observable<Project>{
+    var sessionId = parseInt(IdSession)
+    return this.http.post<Project>(Rutas.RutaDatos+"Proyects/lg/"+id,{sessionId,sessionUser})
+  }
+
+  RegistrarVoto(idProyect: any, idUser:string, usuario:string,puntuacion:any): Observable<string>{
+    var idProyecto= parseInt(idProyect)
+    var idUsuario = parseInt(idUser)
+    var voto = parseInt(puntuacion)
+    console.log({idProyecto,idUsuario,usuario,voto});
+    
+    return this.http.put<string>(Rutas.RutaVotos+"Votos",{idProyecto,idUsuario,usuario,voto});
+  }
+
 }
 

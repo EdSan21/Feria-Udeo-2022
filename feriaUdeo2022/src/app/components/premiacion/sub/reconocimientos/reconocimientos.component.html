@@ -1,1 +1,20 @@
-<p>reconocimientos works!</p>
+<div *ngIf="projectList">
+
+    <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem;">
+        <h1 class="neon-tx-celeste mando" style="margin:0 !important;">Reconocimientos</h1>               
+    </div>
+
+    <div class="offset-md-1 col-md-10 scroll-verde  Drag-Cards"  style="overflow:visible;">
+        
+
+        <drag-scroll #nav class="containerEmision recon animated fadeIn" >
+            <div drag-scroll-item *ngFor="let projects of projectList" class="cartaEmision">
+                <app-project [projectItem]="projects">
+                </app-project>
+            </div>
+            
+        </drag-scroll>
+
+       
+    </div>
+</div>

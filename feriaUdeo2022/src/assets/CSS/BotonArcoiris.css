@@ -116,7 +116,7 @@
   }
 }
 
-
+/*  Botones neon */
 .button-neon {
   color: #da49b3;
   border: 6px solid #da49b3;
@@ -135,4 +135,67 @@
   color: black;
   background-color: #da49b3;
   filter: drop-shadow(0 0 20px #da49b3) contrast(2) brightness(2);
+}
+
+.button-neon.btnVerde {
+  border-radius:12px;
+  padding: 7px 7px;
+  font-size: 15px;
+  font-family: tahoma;
+  letter-spacing:5px;
+  cursor: pointer;
+  font-weight:normal;
+  transition: .5s;
+  color: #3de264;
+  border: 3px solid #3de264;
+  filter: drop-shadow(0 0 1px #3de264) drop-shadow(0 0 3px #3de264) contrast(1.5) brightness(1);
+  
+}
+
+.button-neon.btnVerde:hover {
+  color: black;
+  background-color: #3de264;
+  filter: drop-shadow(0 0 20px #3de264) contrast(2) brightness(2);
+}
+
+.button-neon.btnRojo {
+  border-radius:12px;
+  padding: 7px 7px;
+  font-size: 15px;
+  font-family: tahoma;
+  letter-spacing:5px;
+  cursor: pointer;
+  font-weight:normal;
+  transition: .5s;
+  color: #da4949;
+  border: 3px solid #da4949;
+  filter: drop-shadow(0 0 1px #da4949) drop-shadow(0 0 3px #da4949) contrast(1.5) brightness(1);
+  
+}
+
+.button-neon.btnRojo:hover {
+  color: black;
+  background-color: #da4949;
+  filter: drop-shadow(0 0 20px #da4949) contrast(2) brightness(2);
+}
+
+.button-neon.btnGris {
+  border-radius:12px;
+  padding: 7px 7px;
+  font-size: 15px;
+  font-family: tahoma;
+  letter-spacing:5px;
+  cursor: pointer;
+  font-weight:normal;
+  transition: .5s;
+  color: #636363;
+  border: 3px solid #636363;
+  filter: drop-shadow(0 0 1px #636363) drop-shadow(0 0 3px #636363) contrast(1.5) brightness(1);
+  
+}
+
+.button-neon.btnGris:hover {
+  color: black;
+  background-color: #636363;
+  filter: drop-shadow(0 0 20px #636363) contrast(2) brightness(2);
 }

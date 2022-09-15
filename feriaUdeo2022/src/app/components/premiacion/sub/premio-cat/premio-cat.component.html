@@ -1,1 +1,19 @@
-<p>premio-cat works!</p>
+
+<div *ngFor="let categorias of projectList" class="text-center">
+    <div *ngIf="categorias.ganadores[0]">
+        <h1 class="neon-tx-silver mando" style="margin:0 !important;">{{categorias.categoria}}</h1>  
+
+        <div  class="containerProyecto animated fadeIn">
+            <div *ngIf="categorias.ganadores[1]" class="box silver">
+                <app-project  [projectItem]="categorias.ganadores[1]"></app-project>
+            </div>
+            <div  class="box gold">
+                <app-project  [projectItem]="categorias.ganadores[0]"></app-project>
+            </div>
+            <div *ngIf="categorias.ganadores[2]" class="box bronze">
+                <app-project  [projectItem]="categorias.ganadores[2]"></app-project>
+            </div>
+        </div>
+
+    </div>    
+</div>

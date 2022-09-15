@@ -1,10 +1,15 @@
-<main class="text-white" style="min-height: 80vh;">
+<app-loading *ngIf="loadingDetails"></app-loading>
+<div *ngIf="ErrorTecnico">
+    <app-error-api></app-error-api>
+  </div>
+<main *ngIf="!loadingDetails && !ErrorTecnico" class="text-white" style="min-height: 80vh;">
     <div class="containerDetails mx-2 px-5 lg:px-12 xl:px-14 xxl:px-15 py-4 sm:mx-1 animated fadeIn"
         *ngIf="!loadingDetails">
         <div class="grid lg:grid-cols-7 lg:gap-x-5 xxl:grid-cols-7 xxl:gap-x-5">
             <div class="md:col-span-5">
-                <a class="fab fa-solid fa-arrow-left" style="cursor: auto;" [routerLink]="['/../projects']"></a>
-                <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: auto;" [routerLink]="['/../projects']">
+                <br>
+                <a class="fab fa-solid fa-arrow-left" style="cursor: pointer;" [routerLink]="['/../projects']"></a>
+                <a style="opacity: 0.5; color: rgb(255, 255, 255); cursor: pointer;" [routerLink]="['/../projects']">
                     Volver al
                     contenido</a>
                 <div class="flex flex-col md:flex-row justify-between gap-y-5 md:items-center my-3 px-2 py-2 rounded-md bg-stone-800"
@@ -12,126 +17,93 @@
                     <div class="my-1 flex items-center md:pl-4">
                         <div>
                             <span class="text-xl text-white font-bold">{{proyecto.titulo}}</span>
-                            <h2 class="text-lg md:text-white mt-1">Curso del proyecto</h2>
+                            <h2 class="text-lg md:text-white mt-1">{{proyecto.categoria}}</h2>
                         </div>
                     </div>
-                    <div class="stars">
-                        <form action="">
-                            <input class="star star-5" id="star-5" type="radio" name="star" />
-                            <label class="star star-5" for="star-5"></label>
-                            <input class="star star-4" id="star-4" type="radio" name="star" />
-                            <label class="star star-4" for="star-4"></label>
-                            <input class="star star-3" id="star-3" type="radio" name="star" />
-                            <label class="star star-3" for="star-3"></label>
-                            <input class="star star-2" id="star-2" type="radio" name="star" />
-                            <label class="star star-2" for="star-2"></label>
-                            <input class="star star-1" id="star-1" type="radio" name="star" />
-                            <label class="star star-1" for="star-1"></label>
-                        </form>
+                    <div *ngIf="Session" class="row" >
+                        <!-- Form puntuaciones  -->
+                        
+                        <div ng class="col-md-7">
+                            <ngb-rating [formControl]="currentRate">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <span class="puntuacion neon-tx-celeste" [class.filled]="fill === 100" >&#9733;</span>
+                                  </ng-template>
+                            </ngb-rating>
+                              <pre>Puntuacion: <b>{{currentRate.value}}</b></pre>
+                        </div>
+                        <div *ngIf="proyecto.votacion" class="col-md-5">
+                            <br>
+                            <button [disabled]="!currentRate.valid"  class="btn button-neon {{ currentRate.disabled ? 'btnGris' : 'btnVerde'}} {{ currentRate.valid? 'btnVerde' : 'btnRojo'}}" (click)="EnviarVoto()">
+                                {{ currentRate.disabled ? "Procesando" : " Enviar voto" }}
+                              </button>
+                        </div>
+                        <!-- Notificaciones -->
+                        <div class="col-md-12">
+                            <p *ngFor="let alert of alerts" >
+                                <ngb-alert #selfClosingAlert style="margin-bottom: 0px; margin-top: 15px;" [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+                              </p>
+                        </div>
+
+
                     </div>
                 </div>
+
+                <div class="text-center rounded-md" style="background-color: rgba(119, 8, 8, 0.558)">
+                    <a href="{{proyecto.directo}}" target="_blank" style="cursor: pointer;">
+                        <p class="neon-tx-rojo mando" style="margin:0 !important; font-size: 2rem;"><i class="bi bi-broadcast"></i> Ir a la transmision en vivo <i class="bi bi-broadcast"></i></p>
+                    </a>
+                </div>
+                <br>
+                            
+                        
+
                 <div class="w-full md:w-full sm:w-full" style="opacity: 1; transform: none;">
-                    <youtube-player class="w-full md:w-full sm:w-full" videoId={{proyecto.video}} [width]="600">
+                    <youtube-player class=" neon-md-purpura" videoId={{proyecto.video}} [width]="600">
                     </youtube-player>
                 </div>
                 <div class="bg-zinc-800 p-5 md:p-10 mt-2 rounded-md" style="opacity: 1; transform: none;">
-                    <p class="my-4 text-gray-200">{{proyecto.descripcion}}
-                    </p>
-                    <div class="flex flex-col items-start md:items-center md:flex-row md:justify-between">
-                        <div class="py-4">
-                            <p class="text-gray-300 font-bold mb-2">¿Quieres Compatir mi Contenido?</p>
-                            <div class="flex gap-x-2">
-                                <button>
-                                    <i class="fab fa-facebook-square" style="font-size:24px"></i>
-                                </button>
-                                <button>
-                                    <i class="fab fa-twitter-square" style="font-size:24px"></i>
-                                </button>
-                                <button>
-                                    <i class="fab fa-whatsapp" style="font-size:24px"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-gray-300">
-                                <span>Actualizado:
-                                    <strong> 1/09/2022</strong>
-                                </span>
-                            </p>
-                            <p class="text-secondary">Publicado: 1/8/2022</p>
-                        </div>
-                    </div>
+                    <p class="my-4 text-gray-200">{{proyecto.descripcion}}</p>
+                    
+                    
+                </div>
+                <br>
+                <div class="w-full md:w-full sm:w-full" style="opacity: 1; transform: none;">
+                    <img src="{{proyecto.imgBanner}}" class="img-fluid neon-md-purpura">
                 </div>
             </div>
             <!-- DIV DERECHO -->
             <div class="md:col-span-2 mt-2 md:mt-0 lg:gap-x-5">
+                <ul>
+                    <div class="w-full md:w-full sm:w-full neon-md-celeste" style="opacity: 1; transform: none; width: 70%; margin: auto;margin-block: 2rem;">
+                        <img src="{{proyecto.imgStandar}}" class="img-fluid">
+                    </div>
+                </ul>
                 <!-- Integrantes -->
                 <ul class="">
-                    <h1 class="text-center text-3xl text-white" routerLink="../projects">Integrantes</h1><br>
-                    <li class="p-3 mb-2 bg-zinc-800 rounded"
-                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                    <h1 class="text-center text-3xl text-white mando neon-tx-celeste">Integrantes</h1><br>
+                    <li *ngFor="let estudiante of proyecto.estudiantes" class="p-3 mb-2 bg-zinc-800 rounded" style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                         <div class="flex">
                             <div class="mt-2">
-                            <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
+                            <img class="imgintegrante" src="{{estudiante.imagen}}"
                                 alt="">
                             </div>
-                            <h2 class="p-3 my-2 text-sm font-bold items-center">{{proyecto.video}} {{proyecto.video}}<br /> Nickname 1</h2>
+                            <h1 class="p-3 font-bold items-center" style="line-height:1.6rem;"><span class="badge bg-primary"> {{estudiante.carnet}} </span> <br> {{estudiante.nombre}} <hr> {{estudiante.rol}} <hr> {{estudiante.carrera}}</h1>
                         </div>
                     </li>
-                    <li class="p-3 mb-2 bg-zinc-800 rounded"
-                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
-                        <div class="flex">
-                            <div class="">
-                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
-                                    alt="">
-                            </div>
-                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 2<br /> Nickname 2</h2>
-                        </div>
-                    </li>
-                    <li class="p-3 mb-2 bg-zinc-800 rounded"
-                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
-                        <div class="flex">
-                            <div class="">
-                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
-                                    alt="">
-                            </div>
-                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Username 3<br /> Nickname 3</h2>
-                        </div>
-                    </li>
+                    <br>
                 </ul>
                 <!-- Supervisores -->
                 <ul class="">
-                    <h1 class="text-center text-3xl text-white md:justify-between" routerLink="../projects">Supervisores
+                    <h1 class="text-center text-3xl text-white md:justify-between mando neon-tx-purpura">Supervisores
                     </h1>
                     <br>
-                    <li class="p-3 mb-2 bg-zinc-800 rounded"
-                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
+                    <li *ngFor="let Supervisor of proyecto.supervisores" class="p-3 mb-2 bg-zinc-800 rounded" style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                         <div class="flex">
-                            <div class="">
-                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
-                                    alt="">
+                            <div class="mt-2">
+                            <img class="imgintegrante" src="{{Supervisor.imagen}}"
+                                alt="">
                             </div>
-                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 1<br /> Nickname 1</h2>
-                        </div>
-                    </li>
-                    <li class="p-3 mb-2 bg-zinc-800 rounded"
-                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
-                        <div class="flex">
-                            <div class="">
-                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
-                                    alt="">
-                            </div>
-                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 2<br /> Nickname 2</h2>
-                        </div>
-                    </li>
-                    <li class="p-3 mb-2 bg-zinc-800 rounded"
-                        style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
-                        <div class="flex">
-                            <div class="">
-                                <img src="https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg"
-                                    alt="">
-                            </div>
-                            <h2 class="p-3 my-2 text-sm font-bold items-center"> Supervisor 3<br /> Nickname 3</h2>
+                            <h1 class="p-3 font-bold items-center" style="line-height:1.6rem;">{{Supervisor.nombre}} <br> {{Supervisor.titulo}} <hr> {{Supervisor.informacion}}</h1>
                         </div>
                     </li>
                 </ul>

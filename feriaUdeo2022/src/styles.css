@@ -98,14 +98,24 @@ body{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgba(66, 255, 255, 0.685); 
+    background: linear-gradient(0deg, #000000, #6bebff,#2ae3ff, #6bebff,#000000) ; 
   }
 
   .scroll-rojo ::-webkit-scrollbar-thumb{
-    background: rgba(255, 31, 31, 0.863); 
+    background: linear-gradient(315deg, #000000,#000000, #860000,#ff0000, #860000,#000000,#000000); 
+  }
+  .scroll-verde ::-webkit-scrollbar-thumb{
+    background: linear-gradient(90deg, #000000, #6bebff,#57f95a, #6bebff,#000000) 
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(173, 49, 223, 0.767); 
+    background: linear-gradient(0deg, #000000, #6ba6ff,#2ae3ff, #6ba6ff,#000000); 
+  }
+  /* Handle on hover */
+  .scroll-rojo ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(315deg, #000000,#000000, #b40000,#ff0a0a, #b40000,#000000,#000000);
+  }
+  .scroll-verde ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(90deg, #000000, #6bebff,#eeeeee, #6bebff,#000000);
   }
