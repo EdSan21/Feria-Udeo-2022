@@ -6,6 +6,33 @@
     
     margin-block: 55px;
 }
+.neon-lg-purpura {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 40px #9312fc,
+    0 0 60px #9312fc;
+    
+    margin-block: 55px;
+}
+
+.neon-md-celeste {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 10px #0ff,
+    0 0 30px #0ff;
+    
+    margin-block: 55px;
+}
+
+.neon-md-purpura {
+    box-shadow: 
+    0 0 5px #fff,
+    0 0 10px #9312fc,
+    0 0 30px #9312fc;
+    
+    margin-block: 55px;
+}
+
 .neon-lg-mixed {
     box-shadow: 
     0 0 5px #fff,
@@ -62,6 +89,27 @@
     0 0 30px #9312fc,
     0 0 35px #9312fc;
 }
+
+.neon-tx-gold{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 2px #fff,
+    0 0 15px #fff,
+    0 0 30px #AE8625,
+    0 0 35px #F7EF8A;
+}
+
+.neon-tx-silver{
+    color: #fff;
+    line-height: 100px;
+    text-shadow:
+    0 0 2px #fff,
+    0 0 15px #fff,
+    0 0 30px #545454,
+    0 0 35px #c4c4c4;
+}
+
 .neon-tx-rojo{
     color: #fff;
     line-height: 100px;

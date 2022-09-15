@@ -6,7 +6,7 @@
 <div *ngIf="projectList?.emision">
 
     <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem;">
-        <h1 class="neon-tx-rojo mando" style="margin:0 !important;"><i class="bi bi-broadcast"></i> Proyectos en emision <i class="bi bi-broadcast"></i></h1>               
+        <h1 class="neon-tx-rojo mando" style="margin:0 !important;"><i class="bi bi-broadcast"></i> Proyectos en emisión <i class="bi bi-broadcast"></i></h1>               
     </div>
 
     <div class="offset-md-1 col-md-10 scroll-rojo Drag-Cards"  style="overflow:visible;">
@@ -32,7 +32,7 @@
     <div style="margin: auto; text-align: center; margin-block: 2rem;" >
         <div class="btn-group" role="group" aria-label="Basic example">
             <button  (click)="deseleccionar()" type="button" class="btn button-neon">Ver todos</button>
-            <button class="btn button-neon" (click)="open(content)">buscar categorias</button> 
+            <button class="btn button-neon" (click)="open(content)">Buscar categorías</button> 
         </div>
            
     </div>
@@ -47,7 +47,7 @@
 
 <ng-template #content let-offcanvas>
     <div class="offcanvas-header">
-        <h4 class="neon-tx-celeste mando" style="margin:0 !important;"> <i class="bi bi-filter"></i> Seleccionar categoria </h4>
+        <h4 class="neon-tx-celeste mando" style="margin:0 !important;"> <i class="bi bi-filter"></i> Seleccionar categoría </h4>
         <h4 class="neon-tx-rojo mando" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x-lg"></i></h4>
     </div>
     <div class="offcanvas-body" >

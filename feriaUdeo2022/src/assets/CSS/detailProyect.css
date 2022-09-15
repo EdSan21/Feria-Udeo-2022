@@ -220,7 +220,7 @@ audio,
 canvas,
 embed,
 iframe,
-img,
+.imgintegrante,
 object,
 svg,
 video {
@@ -228,7 +228,7 @@ video {
     vertical-align: middle;
 }
 
-img,
+.imgintegrante,
 video {
     max-width: 215px;
     max-height: 80px;

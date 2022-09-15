@@ -80,6 +80,16 @@
     background: linear-gradient(315deg, #414141, #ff0000)
 }
 
+.containerEmision.recon .cartaEmision:nth-child(even):before,
+.containerEmision.recon .cartaEmision:nth-child(even):after {
+    background: linear-gradient(315deg, #83ffe2,#727272, #19a500)
+}
+
+.containerEmision.recon .cartaEmision:nth-child(odd):before,
+.containerEmision.recon .cartaEmision:nth-child(odd):after {
+    background: linear-gradient(0deg, #19a500,#727272, #83ffe2)
+}
+
 .containerEmision .cartaEmision span {
     display: block;
     position: absolute;
