@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { podioModel } from 'src/app/models/premiacionModel';
+import { RutasImg } from 'src/app/services/RutasImg';
 
 @Component({
   selector: 'app-podio',
@@ -7,7 +8,7 @@ import { podioModel } from 'src/app/models/premiacionModel';
   styleUrls: ['./podio.component.scss']
 })
 export class PodioComponent implements OnInit {
-
+  ImgRoute=RutasImg.RutaImgProyect
   @Input() PrimerLugar!: podioModel;
   @Input() SegundoLugar!: podioModel;
   @Input() TercerLugar!: podioModel;

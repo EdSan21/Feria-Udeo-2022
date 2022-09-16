@@ -8,11 +8,13 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 })
 export class CarouselComponent implements OnInit {
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = ['https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg','https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg','https://i.postimg.cc/tJsB9qXx/under-construction-road-sign-yellow-black-stripes-50808534.jpg'];
   
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.images);
+    
   }
 
 }

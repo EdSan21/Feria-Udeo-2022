@@ -11,15 +11,15 @@
       {{ juradolista.tipo.toLowerCase() }}
     </h1>
   </div>
+
+  
   
   <div class="container-jurado">
     <div *ngFor="let persona of juradolista.lista"  style="max-width:380px;">
       
-      
-      
       <div  class="box-jurado" style="margin-bottom: 20;">
         <div class="cards-jurado cards--three">
-          <img src="{{ persona.imagen }}" class="img-responsive-jurado" alt="" />
+          <img src="{{ImgRoute}}{{ persona.imagen }}" class="img-responsive-jurado" alt="" />
           <span class="cards--three__rect-1">
             <span class="shadow-1"></span>
             <p>

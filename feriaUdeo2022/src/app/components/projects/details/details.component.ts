@@ -4,6 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { NgbAlert, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { InfoProjectsService } from 'src/app/services/infoprojects.service';
+import { RutasImg } from 'src/app/services/RutasImg';
 
 interface Alert {
   type: string;
@@ -34,6 +35,9 @@ const Alert401: Alert[] = [{
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+  ImgRouteP=RutasImg.RutaImgProyect
+  ImgRouteE=RutasImg.RutaImgEstudiante
+  ImgRouteJ=RutasImg.RutaImgJurado
   id: any;
   proyecto:any;
   loadingDetails=true;
