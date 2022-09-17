@@ -68,14 +68,14 @@
                 </div>
                 <br>
                 <div class="w-full md:w-full sm:w-full" style="opacity: 1; transform: none;">
-                    <img [src]="ImgRouteP+proyecto.imgBanner" class="img-fluid neon-md-purpura">
+                    <img appApphideMissingH [src]="ImgRouteP+proyecto.imgBanner" class="img-fluid neon-md-purpura">
                 </div>
             </div>
             <!-- DIV DERECHO -->
             <div class="md:col-span-2 mt-2 md:mt-0 lg:gap-x-5">
                 <ul>
                     <div class="w-full md:w-full sm:w-full neon-md-celeste" style="opacity: 1; transform: none; width: 70%; margin: auto;margin-block: 2rem;">
-                        <img [src]="ImgRouteP+proyecto.imgStandar" class="img-fluid">
+                        <img appHideMissing [src]="ImgRouteP+proyecto.imgStandar" class="img-fluid">
                     </div>
                 </ul>
                 <!-- Integrantes -->
@@ -84,7 +84,7 @@
                     <li *ngFor="let estudiante of proyecto.estudiantes" class="p-3 mb-2 bg-zinc-800 rounded" style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                         <div class="flex">
                             <div class="mt-2">
-                            <img class="imgintegrante" [src]="ImgRouteE+estudiante.imagen"
+                            <img appHideMissing class="imgintegrante" [src]="ImgRouteE+estudiante.imagen"
                                 alt="">
                             </div>
                             <h1 class="p-3 font-bold items-center" style="line-height:1.6rem;"><span class="badge bg-primary"> {{estudiante.carnet}} </span> <br> {{estudiante.nombre}} <hr> {{estudiante.rol}} <hr> {{estudiante.carrera}}</h1>
@@ -100,7 +100,7 @@
                     <li *ngFor="let Supervisor of proyecto.supervisores" class="p-3 mb-2 bg-zinc-800 rounded" style="opacity: .9; transform: none; background-color: rgba(39, 39, 42, 0.4);;">
                         <div class="flex">
                             <div class="mt-2">
-                            <img class="imgintegrante" [src]="ImgRouteJ+Supervisor.imagen"
+                            <img appHideMissing class="imgintegrante" [src]="ImgRouteJ+Supervisor.imagen"
                                 alt="">
                             </div>
                             <h1 class="p-3 font-bold items-center" style="line-height:1.6rem;">{{Supervisor.nombre}} <br> {{Supervisor.titulo}} <hr> {{Supervisor.informacion}}</h1>

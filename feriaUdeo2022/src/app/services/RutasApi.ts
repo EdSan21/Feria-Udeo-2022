@@ -1,4 +1,4 @@
 export class Rutas{
-    public static RutaDatos='https://localhost:44376/api/';
-    public static RutaVotos='https://localhost:44303/api/';
+    public static RutaDatos='http://emacont-001-site2.btempurl.com/api/';
+    public static RutaVotos='https://localhost:4430/api/';
 }

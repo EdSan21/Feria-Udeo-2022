@@ -9,9 +9,9 @@ import { RutasImg } from 'src/app/services/RutasImg';
 })
 export class PodioComponent implements OnInit {
   ImgRoute=RutasImg.RutaImgProyect
-  @Input() PrimerLugar!: podioModel;
-  @Input() SegundoLugar!: podioModel;
-  @Input() TercerLugar!: podioModel;
+  @Input() PrimerLugar?: podioModel;
+  @Input() SegundoLugar?: podioModel;
+  @Input() TercerLugar?: podioModel;
   constructor() {
 
    }

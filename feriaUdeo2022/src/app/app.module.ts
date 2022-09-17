@@ -29,6 +29,8 @@ import { LoadingComponent } from './shared/loading/loading.component';
 import { DetailsComponent } from './components/projects/details/details.component';
 import { ErrorApiComponent } from './shared/error-api/error-api.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
+import { ImgMissingDirective } from './img-missing.directive';
+import { ApphideMissingHDirective } from './apphide-missing-h.directive';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { DragScrollModule } from 'ngx-drag-scroll';
     
     LoadingComponent,
           ErrorApiComponent,
+          ImgMissingDirective,
+          ApphideMissingHDirective,
   ],
   imports: [
     BrowserModule,

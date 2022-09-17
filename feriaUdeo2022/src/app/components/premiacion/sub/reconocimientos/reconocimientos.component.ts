@@ -13,7 +13,7 @@ export class ReconocimientosComponent implements OnInit {
   ds!:DragScrollComponent;
   
   constructor() { }
-  @Input() projectList!: Project[];
+  @Input() projectList?: Project[];
   ngOnInit(): void {
   }
 

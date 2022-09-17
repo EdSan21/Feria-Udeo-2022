@@ -61,7 +61,7 @@
               <!-- Dropdown con session -->
 
               <div *ngIf="Session">
-                <img class="mx-auto d-block rounded" style="height: auto; width: 200px; padding: 15px !important;" [src]="ImgRoute+ImgSession" alt="Usuario">
+                <img appHideMissing class="mx-auto d-block rounded" style="height: auto; width: 200px; padding: 15px !important;" [src]="ImgRoute+ImgSession" alt="Usuario">
                 
                 <button  (click)="CerrarSession()" type="submit" class="btn button-85" style="display: block; margin: auto; margin-block: 15px;">Cerrar session</button>
                 

@@ -3,7 +3,7 @@
     <span class="animated fadeIn"></span>
     <div class="content animated fadeIn " style="min-width: 300px; min-height: 380px;">
         <div class="animated fadeIn" [align]="">
-            <img [src]="ImgRoute+projectItem.imgCarta" alt="" class="img-thumb animated fadeIn">
+            <img appApphideMissingH [src]="ImgRoute+projectItem?.imgCarta" alt="" class="img-thumb animated fadeIn">
             <!-- <iframe width="100%" 
                 height="100%" 
                 [src]="sanitizer.bypassSecurityTrustResourceUrl(projectItem.urlVideo)"
@@ -18,12 +18,12 @@
                 allowfullscreen>
             </iframe> -->
         </div>
-        <h2>{{projectItem.titulo}}</h2>
+        <h2>{{projectItem?.titulo}}</h2>
         <div> 
-            <p >{{projectItem.descripcion}}</p>
+            <p >{{projectItem?.descripcion}}</p>
         </div>
         
-        <a class="nav-link" [routerLink]="['../details/'+projectItem.idProyecto]">Ver más</a>
+        <a class="nav-link" [routerLink]="['../details/'+projectItem?.idProyecto]">Ver más</a>
     </div>
 </div>
 <!-- </app-loading> -->

@@ -11,7 +11,7 @@ import { RutasImg } from 'src/app/services/RutasImg';
 export class ProjectComponent implements OnInit {
   ImgRoute=RutasImg.RutaImgProyect
   loading:boolean=true;
-  @Input() projectItem!: Project;
+  @Input() projectItem?: Project;
   constructor(public sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
