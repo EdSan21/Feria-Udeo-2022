@@ -8,13 +8,13 @@
                 </svg>
             </div>
             <div class="canvas_img-wrapper">
-                <img class="canvas_img" src={{Podio[0].Imagen}} alt="">
+                <img class="canvas_img" [src]="ImgRoute+PrimerLugar.imagen" alt="">
             </div>
             <div class="canvas_copy">
-                <span class="canvas_copy_subtitle ">{{Podio[0].Categoria}}</span>
+                <span class="canvas_copy_subtitle ">{{PrimerLugar.categoria}}</span>
                 <strong class="canvas_copy_title">#1er LUGAR</strong>
                 
-                <span class="canvas_copy_details">{{Podio[0].Titulo}}</span>
+                <span class="canvas_copy_details">{{PrimerLugar.titulo}}</span>
             </div>
         </a>
     </div>
@@ -28,12 +28,12 @@
             <div class="canvas_border neon-md-silver">
             </div>
             <div class="canvas_img-wrapper">
-                <img class="canvas_img" src={{Podio[1].Imagen}} alt="">
+                <img class="canvas_img" [src]="ImgRoute+SegundoLugar.imagen" alt="">
             </div>
             <div class="canvas_copy">
-                <span class="canvas_copy_subtitle">{{Podio[1].Categoria}}</span>
+                <span class="canvas_copy_subtitle">{{SegundoLugar.categoria}}</span>
                 <strong class="canvas_copy_title">#2do LUGAR</strong>
-                <span class="canvas_copy_details">{{Podio[1].Titulo}}</span>
+                <span class="canvas_copy_details">{{TercerLugar.titulo}}</span>
             </div>
         </a>
     </div>
@@ -42,12 +42,12 @@
             <div class="canvas_border neon-md-bronze">
             </div>
             <div class="canvas_img-wrapper">
-                <img class="canvas_img" src="https://m.media-amazon.com/images/I/71g1TNP7JXL._AC_SX425_.jpg" alt="">
+                <img class="canvas_img" [src]="ImgRoute+TercerLugar.imagen" alt="">
             </div>
             <div class="canvas_copy">
-                <span class="canvas_copy_subtitle">{{Podio[2].Imagen}}</span>
+                <span class="canvas_copy_subtitle">{{TercerLugar.categoria}}</span>
                 <strong class="canvas_copy_title">#3er LUGAR</strong>
-                <span class="canvas_copy_details">{{Podio[2].Titulo}}</span>
+                <span class="canvas_copy_details">{{TercerLugar.titulo}}</span>
             </div>
         </a>
     </div>

@@ -1,17 +1,15 @@
 export class Project {
     idProyecto: number;
     titulo: string;
-    video: string;
     descripcion: string;
     imgCarta: string;
     categoria: string;
     idcategoria: number;
     
 
-    constructor(idProyecto = 0, titulo = '', video = '', descripcion = '', imgCarta = '', categoria = '', idcategoria = 0) {
+    constructor(idProyecto = 0, titulo = '', descripcion = '', imgCarta = '', categoria = '', idcategoria = 0) {
         this.idProyecto = idProyecto
         this.titulo = titulo
-        this.video = video
         this.descripcion = descripcion
         this.imgCarta = imgCarta
         this.categoria=categoria

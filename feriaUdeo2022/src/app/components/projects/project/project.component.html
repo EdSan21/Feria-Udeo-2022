@@ -1,9 +1,9 @@
 <!-- <app-loading *ngIf="loading"> -->
 <div style="white-space:normal !important; user-select: none;">
     <span class="animated fadeIn"></span>
-    <div class="content animated fadeIn min-width: 300px; min-height: 400px;">
+    <div class="content animated fadeIn " style="min-width: 300px; min-height: 380px;">
         <div class="animated fadeIn" [align]="">
-            <img [src]="projectItem.imgCarta" alt="" class="img-thumb animated fadeIn">
+            <img [src]="ImgRoute+projectItem.imgCarta" alt="" class="img-thumb animated fadeIn">
             <!-- <iframe width="100%" 
                 height="100%" 
                 [src]="sanitizer.bypassSecurityTrustResourceUrl(projectItem.urlVideo)"
@@ -19,8 +19,11 @@
             </iframe> -->
         </div>
         <h2>{{projectItem.titulo}}</h2>
-        <p>{{projectItem.descripcion}}</p>
-        <a class="nav-link" [routerLink]="['../details/'+projectItem.idProyecto]">Projects details!</a>
+        <div> 
+            <p >{{projectItem.descripcion}}</p>
+        </div>
+        
+        <a class="nav-link" [routerLink]="['../details/'+projectItem.idProyecto]">Ver más</a>
     </div>
 </div>
 <!-- </app-loading> -->

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { DragScrollComponent } from 'ngx-drag-scroll';
+import { Project } from 'src/app/models/projectsmodel';
 
 @Component({
   selector: 'app-reconocimientos',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReconocimientosComponent implements OnInit {
 
+  @ViewChild('nav', { read: DragScrollComponent})
+  ds!:DragScrollComponent;
+  
   constructor() { }
-
+  @Input() projectList!: Project[];
   ngOnInit(): void {
+  }
+
+  moveLeft() {
+    this.ds.moveLeft();
+  }
+
+  moveRight() {
+    this.ds.moveRight();
   }
 
 }

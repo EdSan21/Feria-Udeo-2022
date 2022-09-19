@@ -4,32 +4,39 @@
 </div>
 <div *ngIf="!ErrorTecnico">
 <div class="card__collection-jurado clear-fix-jurado animated fadeIn" *ngFor="let juradolista of juradoList">
+  <br>
   <div class="offset-md-2 col-md-8 text-center" style="margin-top: 1rem">
+    
     <h1 class="neon-tx-lg-purpura mando Titulo">
       {{ juradolista.tipo.toLowerCase() }}
     </h1>
   </div>
+
+  
+  
   <div class="container-jurado">
-    <div *ngFor="let persona of juradolista.lista" class="box-jurado">
-      <div class="cards-jurado cards--three">
-        <img src="{{ persona.imagen }}" class="img-responsive-jurado" alt="" />
-        <span class="cards--three__rect-1">
-          <span class="shadow-1"></span>
-          <p>
-            {{ persona.nombre1 }} {{ persona.nombre2 }}<br />
-            {{ persona.apellido1 }} {{ persona.apellido2 }}
-          </p>
-        </span>
-        <span class="cards--three__rect-2">
-          <span class="shadow-2"></span>
-        </span>
-        <span class="cards--three__circle" ss></span>
-        <ul class="cards--three__list">
-          <li><i class="fab fa-facebook-f"></i></li>
-          <li><i class="fab fa-twitter"></i></li>
-          <li><i class="fab fa-linkedin-in"></i></li>
-        </ul>
+    <div *ngFor="let persona of juradolista.lista"  style="max-width:380px;">
+      
+      <div  class="box-jurado" style="margin-bottom: 20;">
+        <div class="cards-jurado cards--three">
+          <img src="{{ImgRoute}}{{ persona.imagen }}" class="img-responsive-jurado" alt="" />
+          <span class="cards--three__rect-1">
+            <span class="shadow-1"></span>
+            <p>
+              {{ persona.nombre1 }} {{ persona.nombre2 }}<br />
+              {{ persona.apellido1 }} {{ persona.apellido2 }}
+            </p>
+          </span>
+          <span class="cards--three__rect-2">
+            <span class="shadow-2"></span>
+          </span>
+        </div>
       </div>
+
+      <div style="width: 80%; margin:auto;" class="text-center">
+        <h3 class="mando neon-tx-celeste" style="margin-bottom: 0; word-wrap: break-word; line-height: 50px;">{{ persona.titulo }}</h3>
+      </div>
+      <br>
     </div>
   </div>
 </div>

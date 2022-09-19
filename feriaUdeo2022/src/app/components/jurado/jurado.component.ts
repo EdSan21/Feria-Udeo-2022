@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JuradoPage } from 'src/app/models/juradomodels';
 import { JuradoService } from 'src/app/services/jurado.service';
+import { RutasImg } from 'src/app/services/RutasImg';
 
 @Component({
   selector: 'app-jurado',
@@ -9,7 +10,8 @@ import { JuradoService } from 'src/app/services/jurado.service';
 })
 export class JuradoComponent implements OnInit {
 
-  juradoList: JuradoPage[] = []
+  ImgRoute:string=RutasImg.RutaImgJurado;
+  juradoList: JuradoPage[] = [];
   loading = true;
   ErrorTecnico=false;
 

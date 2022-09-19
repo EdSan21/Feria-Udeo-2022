@@ -40,3 +40,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+src/assets/ImgProyects/Estudiantes/*
+src/assets/ImgProyects/Jurado/*
+src/assets/ImgProyects/Proyectos/*
+
+!src/assets/ImgProyects/Estudiantes/.gitkeep
+!src/assets/ImgProyects/Jurado/.gitkeep
+!src/assets/ImgProyects/Proyectos/.gitkeep

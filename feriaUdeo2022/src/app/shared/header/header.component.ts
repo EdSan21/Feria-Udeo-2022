@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { session } from 'src/app/models/Sessionmodel';
 import { LoginService } from 'src/app/services/login.service';
+import { RutasImg } from 'src/app/services/RutasImg';
 
 
 interface Alert {
@@ -31,7 +32,7 @@ const Alert500: Alert[] = [{
   
 })
 export class HeaderComponent implements OnInit {
-
+  ImgRoute=RutasImg.RutaImgJurado
   alerts?: Alert[];
   Session:boolean=false;
   LoginBtn=false;

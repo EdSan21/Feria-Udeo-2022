@@ -10,7 +10,6 @@ import { Rutas } from './RutasApi';
 export class JuradoService {
 
   constructor(public http: HttpClient) { 
-    this.getJurado();
   }
 
   getJurado(): Observable<JuradoPage[]> {
